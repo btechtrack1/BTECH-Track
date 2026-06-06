@@ -1,0 +1,31 @@
+{
+  "name": "BTECH Track — Financial Dashboard",
+  "short_name": "BTECH Track",
+  "description": "Personal finance management app by BTECH Studios",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F1117",
+  "theme_color": "#6C63FF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://btechtrack.onrender.com/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "https://placehold.co/192x192/6C63FF/ffffff?text=BT",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://placehold.co/512x512/6C63FF/ffffff?text=BT",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "productivity"],
+  "screenshots": []
+}
