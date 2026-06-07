@@ -4078,17 +4078,19 @@
       flex-direction: column;
       min-height: 600px;
       max-height: 80vh;
-      border: 1px solid rgba(212,175,55,0.2);
-      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
     }
+
     .ai-chat-header {
       background: linear-gradient(135deg, #1a0a00 0%, #2d1200 50%, #1a1a0a 100%);
-      border-bottom: 1px solid rgba(212,175,55,0.3);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
       padding: 18px 22px;
       display: flex;
       align-items: center;
       gap: 14px;
     }
+
     .ai-chat-header-icon {
       width: 44px;
       height: 44px;
@@ -4100,19 +4102,22 @@
       font-size: 20px;
       color: #0F1117;
       flex-shrink: 0;
-      box-shadow: 0 4px 16px rgba(212,175,55,0.4);
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.4);
     }
+
     .ai-chat-header-title {
       font-size: 16px;
       font-weight: 700;
       color: #D4AF37;
       letter-spacing: .03em;
     }
+
     .ai-chat-header-sub {
       font-size: 12px;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255, 255, 255, 0.5);
       margin-top: 2px;
     }
+
     .ai-chat-messages {
       flex: 1;
       overflow-y: auto;
@@ -4122,19 +4127,30 @@
       gap: 16px;
       background: #0F1117;
     }
+
     .ai-bubble {
       display: flex;
       gap: 12px;
       align-items: flex-start;
       animation: aiBubbleIn .3s ease;
     }
+
     @keyframes aiBubbleIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: none; }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
+
     .ai-bubble.user-msg {
       flex-direction: row-reverse;
     }
+
     .ai-bubble-avatar {
       width: 36px;
       height: 36px;
@@ -4146,21 +4162,24 @@
       font-size: 16px;
       color: #D4AF37;
       flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(122,30,30,0.4);
+      box-shadow: 0 2px 8px rgba(122, 30, 30, 0.4);
     }
+
     .ai-bubble.user-msg .ai-bubble-avatar {
       background: linear-gradient(135deg, #0B6E4F, #085a3e);
-      box-shadow: 0 2px 8px rgba(11,110,79,0.4);
+      box-shadow: 0 2px 8px rgba(11, 110, 79, 0.4);
       color: #fff;
     }
+
     .ai-bubble-avatar.small {
       width: 28px;
       height: 28px;
       font-size: 13px;
     }
+
     .ai-bubble-content {
       background: #1a0a05;
-      border: 1px solid rgba(122,30,30,0.4);
+      border: 1px solid rgba(122, 30, 30, 0.4);
       border-radius: 0 14px 14px 14px;
       padding: 13px 16px;
       max-width: 80%;
@@ -4168,22 +4187,25 @@
       line-height: 1.6;
       color: #e8e8e8;
     }
+
     .ai-bubble.user-msg .ai-bubble-content {
       background: #051a10;
-      border: 1px solid rgba(11,110,79,0.4);
+      border: 1px solid rgba(11, 110, 79, 0.4);
       border-radius: 14px 0 14px 14px;
       color: #e8f5ef;
       text-align: right;
     }
+
     .ai-suggestions {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin-top: 12px;
     }
+
     .ai-suggestion-btn {
-      background: rgba(212,175,55,0.1);
-      border: 1px solid rgba(212,175,55,0.3);
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.3);
       color: #D4AF37;
       border-radius: 20px;
       padding: 6px 13px;
@@ -4192,24 +4214,28 @@
       transition: all .2s;
       font-family: inherit;
     }
+
     .ai-suggestion-btn:hover {
-      background: rgba(212,175,55,0.2);
+      background: rgba(212, 175, 55, 0.2);
       border-color: #D4AF37;
     }
+
     .ai-typing-indicator {
       display: flex;
       align-items: center;
       gap: 10px;
       padding: 0 20px 8px;
     }
+
     .ai-typing-dots {
       display: flex;
       gap: 5px;
       background: #1a0a05;
-      border: 1px solid rgba(122,30,30,0.4);
+      border: 1px solid rgba(122, 30, 30, 0.4);
       border-radius: 14px;
       padding: 12px 16px;
     }
+
     .ai-typing-dots span {
       width: 7px;
       height: 7px;
@@ -4217,30 +4243,51 @@
       background: #D4AF37;
       animation: dotBounce 1.2s ease-in-out infinite;
     }
-    .ai-typing-dots span:nth-child(2) { animation-delay: .2s; }
-    .ai-typing-dots span:nth-child(3) { animation-delay: .4s; }
-    @keyframes dotBounce {
-      0%, 80%, 100% { transform: translateY(0); opacity: .4; }
-      40% { transform: translateY(-6px); opacity: 1; }
+
+    .ai-typing-dots span:nth-child(2) {
+      animation-delay: .2s;
     }
+
+    .ai-typing-dots span:nth-child(3) {
+      animation-delay: .4s;
+    }
+
+    @keyframes dotBounce {
+
+      0%,
+      80%,
+      100% {
+        transform: translateY(0);
+        opacity: .4;
+      }
+
+      40% {
+        transform: translateY(-6px);
+        opacity: 1;
+      }
+    }
+
     .ai-chat-input-area {
-      border-top: 1px solid rgba(212,175,55,0.15);
+      border-top: 1px solid rgba(212, 175, 55, 0.15);
       padding: 14px 18px;
       background: #0a0a0f;
     }
+
     .ai-chat-input-wrap {
       display: flex;
       gap: 10px;
       align-items: flex-end;
       background: #141420;
-      border: 1px solid rgba(212,175,55,0.25);
+      border: 1px solid rgba(212, 175, 55, 0.25);
       border-radius: 14px;
       padding: 6px 6px 6px 14px;
       transition: border-color .2s;
     }
+
     .ai-chat-input-wrap:focus-within {
       border-color: #D4AF37;
     }
+
     .ai-chat-input {
       flex: 1;
       background: none;
@@ -4254,7 +4301,11 @@
       max-height: 120px;
       padding: 6px 0;
     }
-    .ai-chat-input::placeholder { color: rgba(255,255,255,0.3); }
+
+    .ai-chat-input::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
     .ai-send-btn {
       width: 36px;
       height: 36px;
@@ -4270,22 +4321,33 @@
       transition: filter .2s;
       flex-shrink: 0;
     }
-    .ai-send-btn:hover { filter: brightness(1.15); }
+
+    .ai-send-btn:hover {
+      filter: brightness(1.15);
+    }
+
     .ai-chat-footer-note {
       font-size: 11px;
-      color: rgba(255,255,255,0.25);
+      color: rgba(255, 255, 255, 0.25);
       text-align: center;
       margin-top: 8px;
     }
+
     .ai-insight-card {
-      background: rgba(122,30,30,0.15);
-      border: 1px solid rgba(122,30,30,0.3);
+      background: rgba(122, 30, 30, 0.15);
+      border: 1px solid rgba(122, 30, 30, 0.3);
       border-radius: 10px;
       padding: 10px 14px;
       margin-top: 10px;
     }
-    .ai-insight-card strong { color: #D4AF37; }
-    .ai-message { display: contents; }
+
+    .ai-insight-card strong {
+      color: #D4AF37;
+    }
+
+    .ai-message {
+      display: contents;
+    }
 
     /* ═══════════════════════════════════════════════════
        AUTO BUDGET PLANNER
@@ -4296,12 +4358,14 @@
       gap: 14px;
       margin: 16px 0;
     }
+
     .budget-alloc-card {
       background: var(--surface-2);
       border: 1px solid var(--border-solid);
       border-radius: 14px;
       padding: 16px;
     }
+
     .budget-alloc-label {
       font-size: 12px;
       font-weight: 600;
@@ -4310,12 +4374,14 @@
       letter-spacing: .06em;
       margin-bottom: 8px;
     }
+
     .budget-alloc-pct-input {
       display: flex;
       align-items: center;
       gap: 6px;
       margin-bottom: 10px;
     }
+
     .budget-alloc-pct-input input {
       width: 64px;
       padding: 6px 8px;
@@ -4327,12 +4393,14 @@
       font-weight: 600;
       text-align: center;
     }
+
     .budget-alloc-amount {
       font-size: 20px;
       font-weight: 700;
       color: var(--primary);
       font-family: 'DM Mono', monospace;
     }
+
     .budget-alloc-bar {
       height: 6px;
       background: var(--gray-100);
@@ -4340,11 +4408,13 @@
       margin-top: 8px;
       overflow: hidden;
     }
+
     .budget-alloc-fill {
       height: 100%;
       border-radius: 4px;
       transition: width .4s ease;
     }
+
     .budget-total-row {
       display: flex;
       align-items: center;
@@ -4354,8 +4424,16 @@
       border-radius: 10px;
       margin-top: 4px;
     }
-    .budget-total-ok { color: #10B981; font-weight: 700; }
-    .budget-total-err { color: #EF4444; font-weight: 700; }
+
+    .budget-total-ok {
+      color: #10B981;
+      font-weight: 700;
+    }
+
+    .budget-total-err {
+      color: #EF4444;
+      font-weight: 700;
+    }
 
     /* Allocation history cards */
     .alloc-history-card {
@@ -4366,7 +4444,11 @@
       margin-bottom: 10px;
       transition: border-color .2s;
     }
-    .alloc-history-card:hover { border-color: var(--primary); }
+
+    .alloc-history-card:hover {
+      border-color: var(--primary);
+    }
+
     .alloc-history-header {
       display: flex;
       justify-content: space-between;
@@ -4384,6 +4466,7 @@
       gap: 12px;
       margin: 16px 0;
     }
+
     .currency-card {
       background: var(--surface-2);
       border: 2px solid var(--border-solid);
@@ -4393,74 +4476,514 @@
       transition: all .2s;
       text-align: center;
     }
+
     .currency-card:hover {
       border-color: var(--primary);
       transform: translateY(-2px);
     }
+
     .currency-card.active {
       border-color: var(--primary);
-      background: rgba(108,99,255,0.12);
+      background: rgba(108, 99, 255, 0.12);
     }
+
     .currency-card-symbol {
       font-size: 22px;
       font-weight: 700;
       color: var(--primary);
       margin-bottom: 4px;
     }
+
     .currency-card-code {
       font-size: 14px;
       font-weight: 600;
       color: var(--text);
     }
+
     .currency-card-name {
       font-size: 11px;
       color: var(--text-muted);
       margin-top: 2px;
     }
-  
+
     /* ═══════════════════════════════════════
-       CALCULATOR STYLES
+       CALCULATOR STYLES — BTECH Track Premium
     ═══════════════════════════════════════ */
-    .calc-btn {
-      padding: 14px 6px;
+
+    /* CSS variables for calculator theming */
+    :root {
+      --calc-bg-display: #0a1f0e;
+      --calc-border-display: rgba(34, 197, 94, 0.25);
+      --calc-num-bg: #f0f9f4;
+      --calc-num-bg-hover: #dcfce7;
+      --calc-num-color: #052e16;
+      --calc-op-bg: rgba(22, 101, 52, 0.12);
+      --calc-op-bg-hover: rgba(22, 101, 52, 0.22);
+      --calc-op-color: #166534;
+      --calc-fn-bg: rgba(185, 28, 28, 0.09);
+      --calc-fn-bg-hover: rgba(185, 28, 28, 0.18);
+      --calc-fn-color: #991b1b;
+      --calc-eq-from: #14532d;
+      --calc-eq-to: #16a34a;
+      --calc-history-bg: #f0fdf4;
+      --calc-tab-active-bg: #14532d;
+      --calc-tab-active-color: #fff;
+      --calc-tab-color: #166534;
+      --calc-tab-border: rgba(22, 101, 52, 0.25);
+      --calc-display-expr: rgba(134, 239, 172, 0.7);
+      --calc-display-main: #bbf7d0;
+      --calc-display-error: #fca5a5;
+      --calc-card-bg: #ffffff;
+      --calc-card-border: rgba(22, 101, 52, 0.18);
+      --calc-section-header: #14532d;
+      --calc-label-color: #166534;
+      --calc-input-bg: #f0fdf4;
+      --calc-input-border: rgba(22, 101, 52, 0.3);
+      --calc-input-focus: #16a34a;
+      --calc-input-placeholder: rgba(22, 101, 52, 0.45);
+      --calc-input-color: #052e16;
+      --calc-result-bg: #052e16;
+      --calc-result-color: #86efac;
+      --calc-snapshot-bg: rgba(22, 101, 52, 0.07);
+      --calc-snapshot-border: rgba(22, 101, 52, 0.15);
+      --calc-snapshot-label: #166534;
+      --calc-snapshot-val: #052e16;
+      --calc-currency-btn-bg: #14532d;
+      --calc-currency-btn-color: #fff;
+      --calc-badge-bg: rgba(185, 28, 28, 0.1);
+      --calc-badge-color: #7f1d1d;
+    }
+
+    [data-theme="dark"],
+    body[data-theme="dark"],
+    html[data-theme="dark"] body {
+      --calc-bg-display: #020d04;
+      --calc-border-display: rgba(74, 222, 128, 0.2);
+      --calc-num-bg: #0d2413;
+      --calc-num-bg-hover: #14532d;
+      --calc-num-color: #bbf7d0;
+      --calc-op-bg: rgba(74, 222, 128, 0.1);
+      --calc-op-bg-hover: rgba(74, 222, 128, 0.2);
+      --calc-op-color: #4ade80;
+      --calc-fn-bg: rgba(252, 165, 165, 0.1);
+      --calc-fn-bg-hover: rgba(252, 165, 165, 0.2);
+      --calc-fn-color: #fca5a5;
+      --calc-eq-from: #14532d;
+      --calc-eq-to: #16a34a;
+      --calc-history-bg: #0a1f0e;
+      --calc-tab-active-bg: #16a34a;
+      --calc-tab-active-color: #fff;
+      --calc-tab-color: #4ade80;
+      --calc-tab-border: rgba(74, 222, 128, 0.2);
+      --calc-display-expr: rgba(134, 239, 172, 0.55);
+      --calc-display-main: #86efac;
+      --calc-display-error: #fca5a5;
+      --calc-card-bg: #0d1f10;
+      --calc-card-border: rgba(74, 222, 128, 0.15);
+      --calc-section-header: #4ade80;
+      --calc-label-color: #86efac;
+      --calc-input-bg: #0a1a0d;
+      --calc-input-border: rgba(74, 222, 128, 0.25);
+      --calc-input-focus: #22c55e;
+      --calc-input-placeholder: rgba(74, 222, 128, 0.35);
+      --calc-input-color: #bbf7d0;
+      --calc-result-bg: #052e16;
+      --calc-result-color: #4ade80;
+      --calc-snapshot-bg: rgba(74, 222, 128, 0.06);
+      --calc-snapshot-border: rgba(74, 222, 128, 0.12);
+      --calc-snapshot-label: #86efac;
+      --calc-snapshot-val: #dcfce7;
+      --calc-currency-btn-bg: #16a34a;
+      --calc-currency-btn-color: #fff;
+      --calc-badge-bg: rgba(252, 165, 165, 0.12);
+      --calc-badge-color: #fca5a5;
+    }
+
+    /* PAGE WRAPPER */
+    #page-calculator {
+      animation: fadeInCalc 0.25s ease;
+    }
+
+    @keyframes fadeInCalc {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* TAB BAR */
+    .calc-tab-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    .calc-tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 18px;
       border-radius: 10px;
-      border: none;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.12s ease;
-      font-family: 'DM Mono', monospace;
-      user-select: none;
-    }
-    .calc-btn:active { transform: scale(0.93); }
-    .calc-num { background: var(--bg-card2, #1a2236); color: var(--text-primary, #f1f5f9); }
-    .calc-num:hover { background: var(--bg-hover, #243046); }
-    .calc-op  { background: rgba(108,99,255,0.15); color: #a5b4fc; }
-    .calc-op:hover { background: rgba(108,99,255,0.28); }
-    .calc-fn  { background: rgba(6,182,212,0.12); color: #67e8f9; font-size: 13px; }
-    .calc-fn:hover { background: rgba(6,182,212,0.22); }
-    .calc-eq  { background: linear-gradient(135deg,#166534,#15803d); color:#fff; font-size:20px; }
-    .calc-eq:hover { filter: brightness(1.1); }
-    #calc-display { border: 1px solid var(--border-subtle, rgba(255,255,255,0.06)); }
-    /* Calculator card needs padding and no overflow clipping */
-    #page-calculator .section-card {
-      padding: 20px;
-      overflow: visible;
-    }
-    #page-calculator .card-header {
+      border: 1.5px solid var(--calc-tab-border);
+      background: transparent;
+      color: var(--calc-tab-color);
       font-size: 13px;
       font-weight: 600;
-      color: var(--text-secondary, #94a3b8);
-      margin-bottom: 14px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border-subtle);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: 'DM Sans', sans-serif;
     }
+
+    .calc-tab-btn:hover {
+      background: var(--calc-op-bg);
+    }
+
+    .calc-tab-btn.active {
+      background: var(--calc-tab-active-bg);
+      color: var(--calc-tab-active-color);
+      border-color: transparent;
+      box-shadow: 0 2px 8px rgba(22, 101, 52, 0.35);
+    }
+
+    /* SECTION CARDS */
+    #page-calculator .section-card {
+      background: var(--calc-card-bg);
+      border: 1px solid var(--calc-card-border);
+      border-radius: 16px;
+      padding: 22px;
+      overflow: visible;
+      box-shadow: 0 2px 16px rgba(22, 101, 52, 0.07);
+    }
+
+    #page-calculator .card-header {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--calc-section-header);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--calc-card-border);
+      letter-spacing: 0.3px;
+    }
+
+    /* DISPLAY */
+    #calc-display {
+      background: var(--calc-bg-display);
+      border: 1.5px solid var(--calc-border-display);
+      border-radius: 14px;
+      padding: 18px 18px 12px;
+      margin-bottom: 14px;
+      min-height: 90px;
+      position: relative;
+      box-shadow: inset 0 2px 12px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(22, 101, 52, 0.1);
+    }
+
+    #calc-expr {
+      font-size: 12px;
+      color: var(--calc-display-expr);
+      min-height: 18px;
+      text-align: right;
+      font-family: 'DM Mono', monospace;
+      word-break: break-all;
+      letter-spacing: 0.5px;
+    }
+
+    #calc-main {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--calc-display-main);
+      text-align: right;
+      font-family: 'DM Mono', monospace;
+      word-break: break-all;
+      line-height: 1.15;
+      text-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
+    }
+
+    #calc-error {
+      color: var(--calc-display-error);
+      font-size: 11px;
+      text-align: right;
+      min-height: 14px;
+      font-weight: 500;
+    }
+
+    /* HISTORY */
+    #calc-history {
+      max-height: 100px;
+      overflow-y: auto;
+      margin-bottom: 12px;
+      padding: 6px 8px;
+      background: var(--calc-history-bg);
+      border-radius: 10px;
+      border: 1px solid var(--calc-card-border);
+    }
+
+    /* KEYPAD BUTTONS */
+    .calc-btn {
+      padding: 15px 6px;
+      border-radius: 11px;
+      border: none;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.1s ease;
+      font-family: 'DM Mono', monospace;
+      user-select: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .calc-btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.1s;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .calc-btn:active {
+      transform: scale(0.91);
+    }
+
+    .calc-btn:active::after {
+      opacity: 1;
+    }
+
+    /* Number buttons — clean white/light green */
+    .calc-num {
+      background: var(--calc-num-bg);
+      color: var(--calc-num-color);
+      box-shadow: 0 1px 3px rgba(22, 101, 52, 0.1);
+    }
+
+    .calc-num:hover {
+      background: var(--calc-num-bg-hover);
+    }
+
+    /* Operator buttons — dark green tint */
+    .calc-op {
+      background: var(--calc-op-bg);
+      color: var(--calc-op-color);
+      border: 1px solid var(--calc-tab-border);
+      font-size: 18px;
+    }
+
+    .calc-op:hover {
+      background: var(--calc-op-bg-hover);
+    }
+
+    /* Function buttons — dark red tint */
+    .calc-fn {
+      background: var(--calc-fn-bg);
+      color: var(--calc-fn-color);
+      font-size: 13px;
+      border: 1px solid rgba(185, 28, 28, 0.15);
+    }
+
+    .calc-fn:hover {
+      background: var(--calc-fn-bg-hover);
+    }
+
+    /* Equals — solid dark green */
+    .calc-eq {
+      background: linear-gradient(135deg, var(--calc-eq-from), var(--calc-eq-to));
+      color: #fff;
+      font-size: 22px;
+      box-shadow: 0 3px 10px rgba(22, 101, 52, 0.4);
+    }
+
+    .calc-eq:hover {
+      filter: brightness(1.12);
+      box-shadow: 0 4px 14px rgba(22, 101, 52, 0.5);
+    }
+
+    /* History toggle button */
+    .calc-history-toggle {
+      margin-top: 12px;
+      width: 100%;
+      background: var(--calc-fn-bg);
+      border: 1px solid rgba(185, 28, 28, 0.2);
+      color: var(--calc-fn-color);
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .calc-history-toggle:hover {
+      background: var(--calc-fn-bg-hover);
+    }
+
+    /* INPUTS & SELECTS */
     #page-calculator input.form-input,
     #page-calculator select.form-input {
       width: 100%;
       box-sizing: border-box;
+      background: var(--calc-input-bg) !important;
+      border: 1.5px solid var(--calc-input-border) !important;
+      color: var(--calc-input-color) !important;
+      border-radius: 10px;
+      padding: 10px 13px;
+      font-size: 14px;
+      font-family: 'DM Sans', sans-serif;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      outline: none;
     }
-</style>
+
+    #page-calculator input.form-input:focus,
+    #page-calculator select.form-input:focus {
+      border-color: var(--calc-input-focus) !important;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+    }
+
+    #page-calculator input.form-input::placeholder {
+      color: var(--calc-input-placeholder) !important;
+      font-style: italic;
+    }
+
+    #page-calculator select.form-input option {
+      background: var(--calc-card-bg);
+      color: var(--calc-input-color);
+    }
+
+    /* LABELS */
+    #page-calculator label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--calc-label-color);
+      letter-spacing: 0.3px;
+    }
+
+    /* RESULT DISPLAY BOXES */
+    .calc-result-box {
+      padding: 12px 14px;
+      background: var(--calc-result-bg);
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--calc-result-color);
+      min-height: 44px;
+      font-family: 'DM Mono', monospace;
+      border: 1px solid rgba(74, 222, 128, 0.2);
+    }
+
+    /* CURRENCY SNAPSHOT ITEMS */
+    .calc-currency-snap-item {
+      padding: 8px 10px;
+      background: var(--calc-snapshot-bg);
+      border-radius: 8px;
+      font-size: 12px;
+      border: 1px solid var(--calc-snapshot-border);
+    }
+
+    .calc-currency-snap-label {
+      color: var(--calc-snapshot-label);
+      font-weight: 600;
+    }
+
+    .calc-currency-snap-val {
+      float: right;
+      font-weight: 700;
+      color: var(--calc-snapshot-val);
+      font-family: 'DM Mono', monospace;
+    }
+
+    /* BUTTONS IN CALC PANELS */
+    #page-calculator .btn-primary {
+      background: linear-gradient(135deg, var(--calc-eq-from), var(--calc-eq-to));
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 11px 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: filter 0.15s, box-shadow 0.15s;
+      font-family: 'DM Sans', sans-serif;
+      box-shadow: 0 2px 8px rgba(22, 101, 52, 0.3);
+    }
+
+    #page-calculator .btn-primary:hover {
+      filter: brightness(1.1);
+      box-shadow: 0 4px 12px rgba(22, 101, 52, 0.4);
+    }
+
+    /* RATE INFO & MUTED TEXT */
+    #curr-rate-info {
+      font-size: 11px;
+      color: var(--calc-label-color) !important;
+      opacity: 0.65;
+      text-align: center;
+    }
+
+    /* GREETING SECTION */
+    #page-calculator .greeting-time {
+      color: var(--calc-section-header);
+    }
+
+    #page-calculator .greeting-sub {
+      color: var(--calc-label-color);
+      opacity: 0.8;
+    }
+
+    /* DATE RESULT BOXES */
+    #date-diff-result,
+    #date-add-result {
+      background: var(--calc-snapshot-bg);
+      border: 1px solid var(--calc-snapshot-border);
+      border-radius: 10px;
+      padding: 12px;
+      color: var(--calc-snapshot-val);
+    }
+
+    /* LIVE CLOCK */
+    #clock-time {
+      color: var(--calc-section-header) !important;
+    }
+
+    #clock-date {
+      color: var(--calc-label-color);
+    }
+
+    #tz-result {
+      color: var(--calc-op-color) !important;
+    }
+
+    /* CLOCK STATS */
+    #clock-doy,
+    #clock-week,
+    #clock-left {
+      color: var(--calc-snapshot-val) !important;
+    }
+
+    /* REFRESH RATES BUTTON */
+    #page-calculator [onclick="calcCurrencyRefresh()"] {
+      background: var(--calc-fn-bg) !important;
+      color: var(--calc-fn-color) !important;
+      border: 1.5px solid rgba(185, 28, 28, 0.2) !important;
+      border-radius: 10px !important;
+      font-weight: 600 !important;
+      transition: background 0.15s;
+    }
+
+    #page-calculator [onclick="calcCurrencyRefresh()"]:hover {
+      background: var(--calc-fn-bg-hover) !important;
+    }
+
+    /* SWAP ICON */
+    #page-calculator [style*="⇄"] {
+      color: var(--calc-op-color);
+    }
+  </style>
 </head>
 
 <body>
@@ -4987,7 +5510,8 @@
         <!-- ══════════════════ AI FINANCIAL ADVISER ══════════════════ -->
         <div id="page-ai-adviser" style="display:none" class="fade-in">
           <div class="section-header">
-            <span class="section-title"><i class="fa-solid fa-robot" style="color:#D4AF37;margin-right:8px"></i>BTECH AI Financial Adviser</span>
+            <span class="section-title"><i class="fa-solid fa-robot" style="color:#D4AF37;margin-right:8px"></i>BTECH AI
+              Financial Adviser</span>
           </div>
           <div id="ai-adviser-container" class="ai-adviser-container">
             <div class="ai-chat-header">
@@ -5001,15 +5525,22 @@
               <div class="ai-message ai-bubble">
                 <div class="ai-bubble-avatar"><i class="fa-solid fa-robot"></i></div>
                 <div class="ai-bubble-content">
-                  <p>Hello! I'm your BTECH AI Financial Adviser. I have full visibility into your financial data — income, expenses, savings, goals, budgets and loans.</p>
+                  <p>Hello! I'm your BTECH AI Financial Adviser. I have full visibility into your financial data —
+                    income, expenses, savings, goals, budgets and loans.</p>
                   <p style="margin-top:8px">Ask me anything! For example:</p>
                   <div class="ai-suggestions" id="ai-suggestions">
-                    <button class="ai-suggestion-btn" onclick="sendAIMessage('Can I afford a TV worth KES 12000?')">Can I afford a KES 12,000 TV?</button>
-                    <button class="ai-suggestion-btn" onclick="sendAIMessage('How much should I save this month?')">How much should I save?</button>
-                    <button class="ai-suggestion-btn" onclick="sendAIMessage('Where am I overspending?')">Where am I overspending?</button>
-                    <button class="ai-suggestion-btn" onclick="sendAIMessage('What is my biggest expense category?')">Biggest expense category?</button>
-                    <button class="ai-suggestion-btn" onclick="sendAIMessage('Can I take a loan?')">Can I take a loan?</button>
-                    <button class="ai-suggestion-btn" onclick="sendAIMessage('How can I improve my financial health?')">Improve my finances?</button>
+                    <button class="ai-suggestion-btn" onclick="sendAIMessage('Can I afford a TV worth KES 12000?')">Can
+                      I afford a KES 12,000 TV?</button>
+                    <button class="ai-suggestion-btn" onclick="sendAIMessage('How much should I save this month?')">How
+                      much should I save?</button>
+                    <button class="ai-suggestion-btn" onclick="sendAIMessage('Where am I overspending?')">Where am I
+                      overspending?</button>
+                    <button class="ai-suggestion-btn"
+                      onclick="sendAIMessage('What is my biggest expense category?')">Biggest expense category?</button>
+                    <button class="ai-suggestion-btn" onclick="sendAIMessage('Can I take a loan?')">Can I take a
+                      loan?</button>
+                    <button class="ai-suggestion-btn"
+                      onclick="sendAIMessage('How can I improve my financial health?')">Improve my finances?</button>
                   </div>
                 </div>
               </div>
@@ -5020,7 +5551,9 @@
             </div>
             <div class="ai-chat-input-area">
               <div class="ai-chat-input-wrap">
-                <textarea id="ai-chat-input" class="ai-chat-input" placeholder="Ask about your finances…" rows="1" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendAIChat()}" oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,120)+'px'"></textarea>
+                <textarea id="ai-chat-input" class="ai-chat-input" placeholder="Ask about your finances…" rows="1"
+                  onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendAIChat()}"
+                  oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,120)+'px'"></textarea>
                 <button class="ai-send-btn" onclick="sendAIChat()" id="ai-send-btn">
                   <i class="fa-solid fa-paper-plane"></i>
                 </button>
@@ -5033,8 +5566,11 @@
         <!-- ══════════════════ AUTO BUDGET PLANNER ══════════════════ -->
         <div id="page-auto-budget" style="display:none" class="fade-in">
           <div class="section-header">
-            <span class="section-title"><i class="fa-solid fa-sliders" style="color:#06B6D4;margin-right:8px"></i>Auto Budget Planner</span>
-            <button class="btn-action" style="background:linear-gradient(135deg,#06B6D4,#0284C7);color:#fff;padding:8px 16px;font-size:13px" onclick="applyAutoBudget()">Apply Allocation</button>
+            <span class="section-title"><i class="fa-solid fa-sliders" style="color:#06B6D4;margin-right:8px"></i>Auto
+              Budget Planner</span>
+            <button class="btn-action"
+              style="background:linear-gradient(135deg,#06B6D4,#0284C7);color:#fff;padding:8px 16px;font-size:13px"
+              onclick="applyAutoBudget()">Apply Allocation</button>
           </div>
           <div class="section-card" id="auto-budget-content"></div>
         </div>
@@ -5042,7 +5578,8 @@
         <!-- ══════════════════ CURRENCY SETTINGS ══════════════════ -->
         <div id="page-currency" style="display:none" class="fade-in">
           <div class="section-header">
-            <span class="section-title"><i class="fa-solid fa-coins" style="color:#F97316;margin-right:8px"></i>Currency Settings</span>
+            <span class="section-title"><i class="fa-solid fa-coins" style="color:#F97316;margin-right:8px"></i>Currency
+              Settings</span>
           </div>
           <div class="section-card" id="currency-content"></div>
         </div>
@@ -5088,7 +5625,8 @@
             <span class="section-title"><i class="fa-solid fa-handshake" style="color:#F97316;margin-right:8px"></i>Loan
               Manager</span>
             <div style="display:flex;gap:8px">
-              <button class="btn-action btn-dl" style="padding:8px 14px;font-size:13px" onclick="dlPDF('loans-all')"><i class="fa-solid fa-file-pdf" style="margin-right:5px"></i>Export All</button>
+              <button class="btn-action btn-dl" style="padding:8px 14px;font-size:13px" onclick="dlPDF('loans-all')"><i
+                  class="fa-solid fa-file-pdf" style="margin-right:5px"></i>Export All</button>
               <button class="btn-action"
                 style="background:linear-gradient(135deg,#F97316,#EA580C);color:#fff;padding:8px 14px;font-size:13px;box-shadow:0 4px 12px rgba(249,115,22,.3)"
                 onclick="openLoanModal()">+ Add Loan</button>
@@ -5169,42 +5707,38 @@
           <div class="section-card" id="admin-users"></div>
         </div>
 
-      </div><!-- /.main -->
-    </div><!-- /.app-body -->
-
-    <!-- MOBILE BOTTOM NAV -->
-    <nav class="mobile-nav">
-      <div class="mobile-nav-inner">
-
-
         <!-- ══════════════════ CALCULATOR ══════════════════ -->
         <div id="page-calculator" style="display:none" class="fade-in">
           <div class="greeting">
-            <div class="greeting-time"><i class="fa-solid fa-calculator" style="margin-right:8px;opacity:.7"></i>Smart Calculator</div>
+            <div class="greeting-time"><i class="fa-solid fa-calculator" style="margin-right:8px;opacity:.7"></i>Smart
+              Calculator</div>
             <div class="greeting-sub">BODMAS · Date &amp; Time · Currency Converter</div>
           </div>
 
           <!-- Tab Bar -->
-          <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap">
-            <button class="todo-filter-btn active" id="calc-tab-math" onclick="calcSwitchTab('math',this)"><i class="fa-solid fa-square-root-variable" style="margin-right:5px"></i>BODMAS</button>
-            <button class="todo-filter-btn" id="calc-tab-date" onclick="calcSwitchTab('date',this)"><i class="fa-solid fa-calendar-days" style="margin-right:5px"></i>Date &amp; Time</button>
-            <button class="todo-filter-btn" id="calc-tab-currency" onclick="calcSwitchTab('currency',this)"><i class="fa-solid fa-coins" style="margin-right:5px"></i>Currency</button>
+          <div class="calc-tab-bar">
+            <button class="calc-tab-btn active" id="calc-tab-math" onclick="calcSwitchTab('math',this)"><i
+                class="fa-solid fa-square-root-variable" style="margin-right:4px"></i>BODMAS</button>
+            <button class="calc-tab-btn" id="calc-tab-date" onclick="calcSwitchTab('date',this)"><i
+                class="fa-solid fa-calendar-days" style="margin-right:4px"></i>Date &amp; Time</button>
+            <button class="calc-tab-btn" id="calc-tab-currency" onclick="calcSwitchTab('currency',this)"><i
+                class="fa-solid fa-coins" style="margin-right:4px"></i>Currency</button>
           </div>
 
           <!-- ── BODMAS Calculator ── -->
           <div id="calc-panel-math">
-            <div class="section-card" style="max-width:420px;margin:0 auto">
+            <div class="section-card" style="max-width:440px;margin:0 auto">
               <!-- Display -->
-              <div id="calc-display" style="background:var(--bg-deep,#060a10);border-radius:10px;padding:18px 16px 10px;margin-bottom:12px;min-height:80px;position:relative">
-                <div id="calc-expr" style="font-size:12px;color:var(--text-muted);min-height:18px;text-align:right;font-family:'DM Mono',monospace;word-break:break-all">&nbsp;</div>
-                <div id="calc-main" style="font-size:32px;font-weight:700;color:var(--text-primary,#f1f5f9);text-align:right;font-family:'DM Mono',monospace;word-break:break-all;line-height:1.2">0</div>
-                <div id="calc-error" style="color:#EF4444;font-size:11px;text-align:right;min-height:14px">&nbsp;</div>
+              <div id="calc-display">
+                <div id="calc-expr">&nbsp;</div>
+                <div id="calc-main">0</div>
+                <div id="calc-error">&nbsp;</div>
               </div>
               <!-- History -->
-              <div id="calc-history" style="max-height:90px;overflow-y:auto;margin-bottom:10px;padding:4px 6px;background:var(--bg-card2,#111827);border-radius:8px;display:none"></div>
+              <div id="calc-history" style="display:none"></div>
               <!-- Keypad -->
-              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:7px;overflow:visible">
-                <!-- Row 1: functions -->
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;overflow:visible">
+                <!-- Row 1: functions (dark red) -->
                 <button class="calc-btn calc-fn" onclick="calcFn('AC')">AC</button>
                 <button class="calc-btn calc-fn" onclick="calcFn('DEL')">⌫</button>
                 <button class="calc-btn calc-fn" onclick="calcFn('%')">%</button>
@@ -5225,11 +5759,11 @@
                 <button class="calc-btn calc-num" onclick="calcFn('3')">3</button>
                 <button class="calc-btn calc-op" onclick="calcFn('+')">+</button>
                 <!-- Row 5 -->
-                <button class="calc-btn calc-num" onclick="calcFn('(')"> (</button>
+                <button class="calc-btn calc-num" onclick="calcFn('(')">(</button>
                 <button class="calc-btn calc-num" onclick="calcFn('0')">0</button>
-                <button class="calc-btn calc-num" onclick="calcFn(')')"> )</button>
-                <button class="calc-btn calc-eq" onclick="calcFn('=')">= </button>
-                <!-- Row 6: dot + sci -->
+                <button class="calc-btn calc-num" onclick="calcFn(')')">)</button>
+                <button class="calc-btn calc-eq" onclick="calcFn('=')">=</button>
+                <!-- Row 6 -->
                 <button class="calc-btn calc-num" onclick="calcFn('.')">.</button>
                 <button class="calc-btn calc-fn" onclick="calcFn('sqrt')" title="Square root">√</button>
                 <button class="calc-btn calc-fn" onclick="calcFn('sq')" title="Square">x²</button>
@@ -5241,7 +5775,10 @@
                 <button class="calc-btn calc-fn" onclick="calcFn('pi')">π</button>
               </div>
               <!-- History toggle -->
-              <button onclick="document.getElementById('calc-history').style.display=(document.getElementById('calc-history').style.display==='none'?'block':'none')" style="margin-top:10px;width:100%;background:none;border:1px solid var(--border-subtle);color:var(--text-muted);border-radius:6px;padding:6px;font-size:12px;cursor:pointer"><i class="fa-solid fa-clock-rotate-left" style="margin-right:5px"></i>History</button>
+              <button class="calc-history-toggle"
+                onclick="document.getElementById('calc-history').style.display=(document.getElementById('calc-history').style.display==='none'?'block':'none')">
+                <i class="fa-solid fa-clock-rotate-left" style="margin-right:5px"></i>History
+              </button>
             </div>
           </div>
 
@@ -5250,30 +5787,40 @@
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:700px">
               <!-- Date Difference -->
               <div class="section-card">
-                <div class="card-header"><i class="fa-solid fa-arrows-left-right" style="margin-right:8px;color:#06B6D4"></i>Date Difference</div>
+                <div class="card-header"><i class="fa-solid fa-arrows-left-right"
+                    style="margin-right:8px;color:#06B6D4"></i>Date Difference</div>
                 <label style="font-size:12px;color:var(--text-muted)">Start Date</label>
                 <input type="date" id="date-from" class="form-input" style="margin-bottom:10px">
                 <label style="font-size:12px;color:var(--text-muted)">End Date</label>
                 <input type="date" id="date-to" class="form-input" style="margin-bottom:12px">
-                <button class="btn-primary" style="width:100%" onclick="calcDateDiff()"><i class="fa-solid fa-calculator" style="margin-right:6px"></i>Calculate</button>
-                <div id="date-diff-result" style="margin-top:12px;padding:12px;background:var(--bg-deep);border-radius:8px;display:none"></div>
+                <button class="btn-primary" style="width:100%" onclick="calcDateDiff()"><i
+                    class="fa-solid fa-calculator" style="margin-right:6px"></i>Calculate</button>
+                <div id="date-diff-result"
+                  style="margin-top:12px;padding:12px;background:var(--bg-deep);border-radius:8px;display:none"></div>
               </div>
               <!-- Date Add/Subtract -->
               <div class="section-card">
-                <div class="card-header"><i class="fa-solid fa-calendar-plus" style="margin-right:8px;color:#10B981"></i>Add / Subtract Days</div>
+                <div class="card-header"><i class="fa-solid fa-calendar-plus"
+                    style="margin-right:8px;color:#10B981"></i>Add / Subtract Days</div>
                 <label style="font-size:12px;color:var(--text-muted)">Start Date</label>
                 <input type="date" id="date-base" class="form-input" style="margin-bottom:10px">
                 <label style="font-size:12px;color:var(--text-muted)">Days to Add (negative to subtract)</label>
-                <input type="number" id="date-days" class="form-input" placeholder="e.g. 30 or -7" style="margin-bottom:12px">
-                <button class="btn-primary" style="width:100%" onclick="calcDateAdd()"><i class="fa-solid fa-plus" style="margin-right:6px"></i>Calculate</button>
-                <div id="date-add-result" style="margin-top:12px;padding:12px;background:var(--bg-deep);border-radius:8px;display:none"></div>
+                <input type="number" id="date-days" class="form-input" placeholder="e.g. 30 or -7"
+                  style="margin-bottom:12px">
+                <button class="btn-primary" style="width:100%" onclick="calcDateAdd()"><i class="fa-solid fa-plus"
+                    style="margin-right:6px"></i>Calculate</button>
+                <div id="date-add-result"
+                  style="margin-top:12px;padding:12px;background:var(--bg-deep);border-radius:8px;display:none"></div>
               </div>
               <!-- Live Clock -->
               <div class="section-card" style="grid-column:span 2">
-                <div class="card-header"><i class="fa-solid fa-clock" style="margin-right:8px;color:#F59E0B"></i>Live Clock &amp; Current Date</div>
+                <div class="card-header"><i class="fa-solid fa-clock" style="margin-right:8px;color:#F59E0B"></i>Live
+                  Clock &amp; Current Date</div>
                 <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
                   <div style="flex:1;min-width:160px;text-align:center">
-                    <div id="clock-time" style="font-size:38px;font-weight:800;font-family:'DM Mono',monospace;color:var(--text-primary);letter-spacing:2px">00:00:00</div>
+                    <div id="clock-time"
+                      style="font-size:38px;font-weight:800;font-family:'DM Mono',monospace;color:var(--text-primary);letter-spacing:2px">
+                      00:00:00</div>
                     <div id="clock-date" style="font-size:13px;color:var(--text-muted);margin-top:4px"></div>
                   </div>
                   <div style="flex:1;min-width:180px">
@@ -5305,7 +5852,9 @@
                       <option value="Asia/Tokyo">Tokyo (JST)</option>
                       <option value="Australia/Sydney">Sydney (AEST)</option>
                     </select>
-                    <div id="tz-result" style="margin-top:8px;font-size:13px;color:var(--accent-cyan);font-family:'DM Mono',monospace"></div>
+                    <div id="tz-result"
+                      style="margin-top:8px;font-size:13px;color:var(--accent-cyan);font-family:'DM Mono',monospace">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -5314,39 +5863,52 @@
 
           <!-- ── Currency Panel ── -->
           <div id="calc-panel-currency" style="display:none">
-            <div class="section-card" style="max-width:500px">
-              <div class="card-header"><i class="fa-solid fa-arrows-rotate" style="margin-right:8px;color:#F97316"></i>Currency Converter</div>
-              <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:end;margin-bottom:14px">
+            <div class="section-card" style="max-width:520px">
+              <div class="card-header"><i class="fa-solid fa-coins" style="margin-right:8px"></i>Currency Converter
+              </div>
+              <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:end;margin-bottom:16px">
                 <div>
-                  <label style="font-size:12px;color:var(--text-muted)">Amount</label>
-                  <input type="number" id="curr-amount" class="form-input" value="1" min="0" step="any" oninput="calcCurrency()">
+                  <label>Amount</label>
+                  <input type="number" id="curr-amount" class="form-input" value="1" min="0" step="any"
+                    placeholder="Enter amount…" oninput="calcCurrency()" style="margin-top:5px">
                 </div>
-                <div style="padding-bottom:8px;color:var(--text-muted);font-size:20px">⇄</div>
+                <div style="padding-bottom:10px;font-size:22px;font-weight:700;color:var(--calc-op-color);">⇄</div>
                 <div>
-                  <label style="font-size:12px;color:var(--text-muted)">Result</label>
-                  <div id="curr-result" style="padding:9px 12px;background:var(--bg-deep);border-radius:8px;font-size:16px;font-weight:700;color:#10B981;min-height:40px;font-family:'DM Mono',monospace">—</div>
+                  <label>Result</label>
+                  <div id="curr-result" class="calc-result-box" style="margin-top:5px">—</div>
                 </div>
               </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
                 <div>
-                  <label style="font-size:12px;color:var(--text-muted)">From</label>
-                  <select id="curr-from" class="form-input" onchange="calcCurrency()"></select>
+                  <label>From Currency</label>
+                  <select id="curr-from" class="form-input" onchange="calcCurrency()" style="margin-top:5px"></select>
                 </div>
                 <div>
-                  <label style="font-size:12px;color:var(--text-muted)">To</label>
-                  <select id="curr-to" class="form-input" onchange="calcCurrency()"></select>
+                  <label>To Currency</label>
+                  <select id="curr-to" class="form-input" onchange="calcCurrency()" style="margin-top:5px"></select>
                 </div>
               </div>
-              <button class="btn-primary" style="width:100%;margin-bottom:10px" onclick="calcCurrencyRefresh()"><i class="fa-solid fa-arrows-rotate" style="margin-right:6px"></i>Refresh Rates</button>
-              <div id="curr-rate-info" style="font-size:11px;color:var(--text-muted);text-align:center">Rates are fetched live. Fallback rates used offline.</div>
+              <button class="btn-primary" style="width:100%;margin-bottom:10px" onclick="calcCurrencyRefresh()"><i
+                  class="fa-solid fa-arrows-rotate" style="margin-right:6px"></i>Refresh Live Rates</button>
+              <div id="curr-rate-info">Rates fetched live · Fallback rates used offline.</div>
               <!-- Multi-convert table -->
-              <div style="margin-top:16px">
-                <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">Quick multi-currency snapshot</div>
-                <div id="curr-multi" style="display:grid;grid-template-columns:1fr 1fr;gap:6px"></div>
+              <div style="margin-top:18px">
+                <div
+                  style="font-size:12px;font-weight:600;color:var(--calc-label-color);margin-bottom:8px;letter-spacing:0.3px">
+                  <i class="fa-solid fa-table-list" style="margin-right:5px"></i>Quick Multi-Currency Snapshot
+                </div>
+                <div id="curr-multi" style="display:grid;grid-template-columns:1fr 1fr;gap:7px"></div>
               </div>
             </div>
           </div>
         </div><!-- end page-calculator -->
+
+      </div><!-- /.main -->
+    </div><!-- /.app-body -->
+
+    <!-- MOBILE BOTTOM NAV -->
+    <nav class="mobile-nav">
+      <div class="mobile-nav-inner">
 
         <button class="mobile-nav-btn active" onclick="showPage('dashboard',this);updateMobileNav(this)"
           data-page="dashboard">
@@ -5365,7 +5927,8 @@
         <button class="mobile-nav-btn" onclick="showPage('todo',this);updateMobileNav(this)" data-page="todo">
           <i class="fa-solid fa-check-circle"></i><span class="mn-label">Tasks</span>
         </button>
-        <button class="mobile-nav-btn" onclick="showPage('ai-adviser',this);updateMobileNav(this)" data-page="ai-adviser">
+        <button class="mobile-nav-btn" onclick="showPage('ai-adviser',this);updateMobileNav(this)"
+          data-page="ai-adviser">
           <i class="fa-solid fa-robot" style="color:#D4AF37"></i><span class="mn-label">AI</span>
         </button>
       </div>
@@ -6508,6 +7071,18 @@
     }
 
     async function renderPage(name) {
+      if (name === 'calculator') {
+        ['math', 'date', 'currency'].forEach(t => {
+          const p = document.getElementById('calc-panel-' + t);
+          const b = document.getElementById('calc-tab-' + t);
+          if (p) p.style.display = t === 'math' ? '' : 'none';
+          if (b) b.classList.toggle('active', t === 'math');
+        });
+        const mainEl = document.getElementById('calc-main');
+        if (mainEl && (!mainEl.textContent || mainEl.textContent.trim() === '')) mainEl.textContent = '0';
+        setTimeout(() => { if (document.getElementById('clock-time')) calcStartClock(); }, 50);
+        return;
+      }
       await refreshAllData();
       switch (name) {
         case 'dashboard': renderDashboard(); break;
@@ -6524,7 +7099,6 @@
         case 'ai-adviser': renderAIAdviser(); break;
         case 'auto-budget': renderAutoBudget(); break;
         case 'currency': renderCurrencySettings(); break;
-        case 'calculator': setTimeout(()=>{ if(document.getElementById('clock-time')) calcStartClock(); },50); break;
       }
     }
 
@@ -7268,9 +7842,9 @@
     // ═══════════════════════════════════════════════════════════
     // ─── Auto Budget: template categories ───────────────────────
     let _budgetAllocs = JSON.parse(localStorage.getItem('btech_auto_budget') || 'null') || [
-      { name: 'Rent / Housing',   pct: 30, color: '#6C63FF' },
+      { name: 'Rent / Housing', pct: 30, color: '#6C63FF' },
       { name: 'Food & Transport', pct: 40, color: '#10B981' },
-      { name: 'Savings',          pct: 30, color: '#D4AF37' }
+      { name: 'Savings', pct: 30, color: '#D4AF37' }
     ];
     // ─── Per-entry allocation history ────────────────────────────
     let _allocHistory = JSON.parse(localStorage.getItem('btech_alloc_history') || '[]');
@@ -7301,7 +7875,7 @@
                 <input type="number" min="0" max="100" value="${a.pct}" id="alloc-pct-${i}" oninput="updateAllocPreview(${i})" style="width:60px">
                 <span style="font-size:14px;color:var(--text-muted)">%</span>
               </div>
-              <div class="budget-alloc-bar" style="margin-top:8px"><div class="budget-alloc-fill" id="alloc-bar-${i}" style="width:${Math.min(100,a.pct)}%;background:${a.color}"></div></div>
+              <div class="budget-alloc-bar" style="margin-top:8px"><div class="budget-alloc-fill" id="alloc-bar-${i}" style="width:${Math.min(100, a.pct)}%;background:${a.color}"></div></div>
             </div>`).join('')}
           <div class="budget-alloc-card" style="border-style:dashed;cursor:pointer" onclick="addBudgetCategory()">
             <div style="text-align:center;color:var(--text-muted);padding:18px 0">
@@ -7312,12 +7886,12 @@
         </div>
         <div class="budget-total-row" style="margin-bottom:8px">
           <span style="font-size:14px;color:var(--text)">Total</span>
-          <span id="alloc-total" class="${total===100?'budget-total-ok':'budget-total-err'}">${total}% ${total===100?'✓':'(must equal 100%)'}</span>
+          <span id="alloc-total" class="${total === 100 ? 'budget-total-ok' : 'budget-total-err'}">${total}% ${total === 100 ? '✓' : '(must equal 100%)'}</span>
         </div>`;
 
       // ── Section 2: generate new allocation from specific income ─
       const incomeOptions = _income.length
-        ? _income.slice(0,30).map(r=>`<option value="${esc(r.id||'')}|${r.amount}|${esc(r.description||r.desc||'Income')}">${esc(r.description||r.desc||'Income')} — ${fmt(r.amount)} (${fmtDate(r.transaction_date||r.date||'')})</option>`).join('')
+        ? _income.slice(0, 30).map(r => `<option value="${esc(r.id || '')}|${r.amount}|${esc(r.description || r.desc || 'Income')}">${esc(r.description || r.desc || 'Income')} — ${fmt(r.amount)} (${fmtDate(r.transaction_date || r.date || '')})</option>`).join('')
         : '<option value="">No income entries found</option>';
 
       const generateHtml = `
@@ -7416,7 +7990,7 @@
         incomeId,
         source,
         incomeAmount: useAmt,
-        date: new Date().toLocaleDateString('en-KE', { year:'numeric', month:'short', day:'numeric' }),
+        date: new Date().toLocaleDateString('en-KE', { year: 'numeric', month: 'short', day: 'numeric' }),
         breakdown
       };
       _allocHistory.push(newAlloc);
@@ -8040,10 +8614,10 @@
         const loan = _loans.find(l => String(l.id) === String(extraArg));
         if (!loan) { showToast('Loan not found', 'danger'); return; }
         const principal = parseFloat(loan.amount) || 0;
-        const paid      = parseFloat(loan.amount_paid) || 0;
+        const paid = parseFloat(loan.amount_paid) || 0;
         const remaining = Math.max(0, principal - paid);
-        const pct       = principal > 0 ? Math.min(100, Math.round((paid/principal)*100)) : 0;
-        const status    = getLoanStatus(loan);
+        const pct = principal > 0 ? Math.min(100, Math.round((paid / principal) * 100)) : 0;
+        const status = getLoanStatus(loan);
         const isBorrowed = loan.type === 'borrowed';
         const uname = currentProfile?.name || currentUser?.email?.split('@')[0] || 'User';
 
@@ -8073,7 +8647,7 @@
 
         doc.setTextColor(200, 220, 200); doc.setFontSize(7.5); doc.setFont('helvetica', 'normal');
         doc.text('Prepared for: ' + uname, W - M, 32, { align: 'right' });
-        doc.text('Generated: ' + new Date().toLocaleDateString('en-KE',{year:'numeric',month:'long',day:'numeric'}), W - M, 40, { align: 'right' });
+        doc.text('Generated: ' + new Date().toLocaleDateString('en-KE', { year: 'numeric', month: 'long', day: 'numeric' }), W - M, 40, { align: 'right' });
         doc.text('Confidential', W - M, 48, { align: 'right' });
 
         y = 62;
@@ -8091,49 +8665,49 @@
 
         // Summary boxes
         const boxes = [
-          { label: 'PRINCIPAL',    value: fmt(principal), bg: [240,244,248], val: [15,23,42],    lbl: [100,116,139] },
-          { label: 'AMOUNT PAID',  value: fmt(paid),      bg: [236,253,245], val: [11,110,79],   lbl: [6,95,70] },
-          { label: 'OUTSTANDING',  value: fmt(remaining), bg: [254,242,242], val: [122,30,30],   lbl: [153,27,27] },
-          { label: 'REPAID',       value: pct + '%',      bg: [255,251,235], val: [180,100,0],   lbl: [146,64,14] }
+          { label: 'PRINCIPAL', value: fmt(principal), bg: [240, 244, 248], val: [15, 23, 42], lbl: [100, 116, 139] },
+          { label: 'AMOUNT PAID', value: fmt(paid), bg: [236, 253, 245], val: [11, 110, 79], lbl: [6, 95, 70] },
+          { label: 'OUTSTANDING', value: fmt(remaining), bg: [254, 242, 242], val: [122, 30, 30], lbl: [153, 27, 27] },
+          { label: 'REPAID', value: pct + '%', bg: [255, 251, 235], val: [180, 100, 0], lbl: [146, 64, 14] }
         ];
         const bw = CW / 4;
         boxes.forEach((b, i) => {
           const bx = M + i * bw;
           doc.setFillColor(...b.bg); doc.rect(bx, y, bw - 2, 22, 'F');
-          doc.setTextColor(...b.lbl); doc.setFontSize(7); doc.setFont('helvetica','bold');
-          doc.text(b.label, bx + (bw-2)/2, y + 7, { align:'center' });
-          doc.setTextColor(...b.val); doc.setFontSize(10); doc.setFont('helvetica','bold');
-          doc.text(b.value, bx + (bw-2)/2, y + 16.5, { align:'center' });
+          doc.setTextColor(...b.lbl); doc.setFontSize(7); doc.setFont('helvetica', 'bold');
+          doc.text(b.label, bx + (bw - 2) / 2, y + 7, { align: 'center' });
+          doc.setTextColor(...b.val); doc.setFontSize(10); doc.setFont('helvetica', 'bold');
+          doc.text(b.value, bx + (bw - 2) / 2, y + 16.5, { align: 'center' });
         });
         y += 28;
 
         // Progress bar
         doc.setFillColor(226, 232, 240); doc.roundedRect(M, y, CW, 5, 2, 2, 'F');
-        const progColor = pct >= 100 ? [11,110,79] : pct >= 60 ? [11,110,79] : pct >= 30 ? [245,158,11] : [122,30,30];
+        const progColor = pct >= 100 ? [11, 110, 79] : pct >= 60 ? [11, 110, 79] : pct >= 30 ? [245, 158, 11] : [122, 30, 30];
         doc.setFillColor(...progColor); doc.roundedRect(M, y, CW * pct / 100, 5, 2, 2, 'F');
-        doc.setTextColor(100, 116, 139); doc.setFontSize(7); doc.setFont('helvetica','normal');
-        doc.text(pct + '% repaid', W - M, y + 4, { align:'right' });
+        doc.setTextColor(100, 116, 139); doc.setFontSize(7); doc.setFont('helvetica', 'normal');
+        doc.text(pct + '% repaid', W - M, y + 4, { align: 'right' });
         y += 14;
 
         // Detail table
         const detailRows = [
-          ['Loan Type',         isBorrowed ? 'Borrowed (I owe)' : 'Lent (They owe me)'],
-          ['Counterparty',      loan.person || '—'],
-          ['Category',          loan.category || '—'],
-          ['Interest Rate',     loan.interest_rate ? loan.interest_rate + '%' : 'None'],
-          ['Due Date',          loan.due_date ? fmtDate(loan.due_date) : '—'],
-          ['Status',            status.charAt(0).toUpperCase() + status.slice(1)],
-          ['Notes',             loan.notes || '—']
+          ['Loan Type', isBorrowed ? 'Borrowed (I owe)' : 'Lent (They owe me)'],
+          ['Counterparty', loan.person || '—'],
+          ['Category', loan.category || '—'],
+          ['Interest Rate', loan.interest_rate ? loan.interest_rate + '%' : 'None'],
+          ['Due Date', loan.due_date ? fmtDate(loan.due_date) : '—'],
+          ['Status', status.charAt(0).toUpperCase() + status.slice(1)],
+          ['Notes', loan.notes || '—']
         ];
         doc.setFillColor(15, 23, 42); doc.rect(M, y, CW, 9, 'F');
-        doc.setTextColor(212, 175, 55); doc.setFontSize(8); doc.setFont('helvetica','bold');
+        doc.setTextColor(212, 175, 55); doc.setFontSize(8); doc.setFont('helvetica', 'bold');
         doc.text('LOAN DETAILS', M + 4, y + 6);
         y += 9;
         detailRows.forEach((row, i) => {
           if (i % 2 === 0) { doc.setFillColor(248, 250, 252); doc.rect(M, y, CW, 8, 'F'); }
-          doc.setTextColor(100, 116, 139); doc.setFontSize(8); doc.setFont('helvetica','normal');
+          doc.setTextColor(100, 116, 139); doc.setFontSize(8); doc.setFont('helvetica', 'normal');
           doc.text(row[0], M + 3, y + 5.5);
-          doc.setTextColor(15, 23, 42); doc.setFont('helvetica','bold');
+          doc.setTextColor(15, 23, 42); doc.setFont('helvetica', 'bold');
           doc.text(String(row[1]).slice(0, 80), M + 60, y + 5.5);
           y += 8;
         });
@@ -8142,31 +8716,31 @@
         // Payment history
         const payments = await fetchLoanPayments(loan.id);
         doc.setFillColor(11, 110, 79); doc.rect(M, y, CW, 9, 'F');
-        doc.setTextColor(255, 255, 255); doc.setFontSize(8); doc.setFont('helvetica','bold');
+        doc.setTextColor(255, 255, 255); doc.setFontSize(8); doc.setFont('helvetica', 'bold');
         doc.text('PAYMENT HISTORY (' + payments.length + ' records)', M + 4, y + 6);
         y += 9;
         if (!payments.length) {
           doc.setFillColor(248, 250, 252); doc.rect(M, y, CW, 8, 'F');
-          doc.setTextColor(100, 116, 139); doc.setFontSize(8); doc.setFont('helvetica','italic');
+          doc.setTextColor(100, 116, 139); doc.setFontSize(8); doc.setFont('helvetica', 'italic');
           doc.text('No payments recorded yet.', M + 3, y + 5.5);
           y += 8;
         } else {
-          const pcols = [{label:'DATE',w:45},{label:'NOTES',w:CW-85},{label:'AMOUNT',w:40,right:true}];
+          const pcols = [{ label: 'DATE', w: 45 }, { label: 'NOTES', w: CW - 85 }, { label: 'AMOUNT', w: 40, right: true }];
           doc.setFillColor(30, 41, 59); doc.rect(M, y, CW, 8, 'F');
-          doc.setTextColor(255,255,255); doc.setFontSize(7.5); doc.setFont('helvetica','bold');
+          doc.setTextColor(255, 255, 255); doc.setFontSize(7.5); doc.setFont('helvetica', 'bold');
           let px = M + 2;
-          pcols.forEach(c => { doc.text(c.label, c.right?px+c.w-2:px, y+5.5,{align:c.right?'right':'left'}); px+=c.w; });
+          pcols.forEach(c => { doc.text(c.label, c.right ? px + c.w - 2 : px, y + 5.5, { align: c.right ? 'right' : 'left' }); px += c.w; });
           y += 8;
           payments.forEach((p, i) => {
             if (y > 270) { doc.addPage(); y = 20; }
-            if (i%2===0) { doc.setFillColor(248,250,252); doc.rect(M,y,CW,7,'F'); }
-            doc.setDrawColor(226,232,240); doc.line(M,y+7,M+CW,y+7);
-            doc.setTextColor(15,23,42); doc.setFontSize(8); doc.setFont('helvetica','normal');
+            if (i % 2 === 0) { doc.setFillColor(248, 250, 252); doc.rect(M, y, CW, 7, 'F'); }
+            doc.setDrawColor(226, 232, 240); doc.line(M, y + 7, M + CW, y + 7);
+            doc.setTextColor(15, 23, 42); doc.setFontSize(8); doc.setFont('helvetica', 'normal');
             px = M + 2;
-            const pdata = [fmtDate(p.payment_date), p.notes||'Payment', '+'+fmt(p.amount)];
+            const pdata = [fmtDate(p.payment_date), p.notes || 'Payment', '+' + fmt(p.amount)];
             pcols.forEach((c, ci) => {
-              const v = String(pdata[ci]||''); const txt = doc.getTextWidth(v)>c.w-4?doc.splitTextToSize(v,c.w-4)[0]+'…':v;
-              const _pc = ci===2?[11,110,79]:[15,23,42]; doc.setTextColor(_pc[0],_pc[1],_pc[2]); doc.text(txt,c.right?px+c.w-2:px,y+5,{align:c.right?'right':'left'}); px+=c.w;
+              const v = String(pdata[ci] || ''); const txt = doc.getTextWidth(v) > c.w - 4 ? doc.splitTextToSize(v, c.w - 4)[0] + '…' : v;
+              const _pc = ci === 2 ? [11, 110, 79] : [15, 23, 42]; doc.setTextColor(_pc[0], _pc[1], _pc[2]); doc.text(txt, c.right ? px + c.w - 2 : px, y + 5, { align: c.right ? 'right' : 'left' }); px += c.w;
             });
             y += 7;
           });
@@ -8176,54 +8750,54 @@
       // ══ LOANS — ALL LOANS REPORT ══════════════════════════════════
       if (type === 'loans-all') {
         const borrowed = _loans.filter(l => l.type === 'borrowed');
-        const lent     = _loans.filter(l => l.type === 'lent');
-        const totalBorrowed = borrowed.reduce((s,l)=>s+parseFloat(l.amount||0),0);
-        const totalLent     = lent.reduce((s,l)=>s+parseFloat(l.amount||0),0);
-        const totalPaid     = _loans.reduce((s,l)=>s+parseFloat(l.amount_paid||0),0);
-        const totalDebt     = _loans.reduce((s,l)=>s+Math.max(0,parseFloat(l.amount||0)-parseFloat(l.amount_paid||0)),0);
-        const active    = _loans.filter(l=>getLoanStatus(l)==='active').length;
-        const overdue   = _loans.filter(l=>getLoanStatus(l)==='overdue').length;
-        const completed = _loans.filter(l=>getLoanStatus(l)==='completed').length;
+        const lent = _loans.filter(l => l.type === 'lent');
+        const totalBorrowed = borrowed.reduce((s, l) => s + parseFloat(l.amount || 0), 0);
+        const totalLent = lent.reduce((s, l) => s + parseFloat(l.amount || 0), 0);
+        const totalPaid = _loans.reduce((s, l) => s + parseFloat(l.amount_paid || 0), 0);
+        const totalDebt = _loans.reduce((s, l) => s + Math.max(0, parseFloat(l.amount || 0) - parseFloat(l.amount_paid || 0)), 0);
+        const active = _loans.filter(l => getLoanStatus(l) === 'active').length;
+        const overdue = _loans.filter(l => getLoanStatus(l) === 'overdue').length;
+        const completed = _loans.filter(l => getLoanStatus(l) === 'completed').length;
 
-        drawTitle('Loan Portfolio Statement', new Date().toLocaleDateString('en-KE',{month:'long',year:'numeric'}));
+        drawTitle('Loan Portfolio Statement', new Date().toLocaleDateString('en-KE', { month: 'long', year: 'numeric' }));
 
         // Summary row 1
         summaryBox([
-          {label:'TOTAL BORROWED', value:fmt(totalBorrowed), bg:[254,242,242], val:[122,30,30], lbl:[153,27,27], valColor:[122,30,30], labelColor:[153,27,27]},
-          {label:'TOTAL LENT',     value:fmt(totalLent),     bg:[236,253,245], val:[11,110,79], lbl:[6,95,70],   valColor:[11,110,79], labelColor:[6,95,70]},
-          {label:'TOTAL PAID',     value:fmt(totalPaid),     bg:[240,244,248], val:[79,70,229], lbl:[79,70,229], valColor:[79,70,229], labelColor:[79,70,229]},
-          {label:'OUTSTANDING',    value:fmt(totalDebt),     bg:[255,251,235], val:[180,100,0], lbl:[146,64,14], valColor:[180,100,0], labelColor:[146,64,14]}
+          { label: 'TOTAL BORROWED', value: fmt(totalBorrowed), bg: [254, 242, 242], val: [122, 30, 30], lbl: [153, 27, 27], valColor: [122, 30, 30], labelColor: [153, 27, 27] },
+          { label: 'TOTAL LENT', value: fmt(totalLent), bg: [236, 253, 245], val: [11, 110, 79], lbl: [6, 95, 70], valColor: [11, 110, 79], labelColor: [6, 95, 70] },
+          { label: 'TOTAL PAID', value: fmt(totalPaid), bg: [240, 244, 248], val: [79, 70, 229], lbl: [79, 70, 229], valColor: [79, 70, 229], labelColor: [79, 70, 229] },
+          { label: 'OUTSTANDING', value: fmt(totalDebt), bg: [255, 251, 235], val: [180, 100, 0], lbl: [146, 64, 14], valColor: [180, 100, 0], labelColor: [146, 64, 14] }
         ]);
         summaryBox([
-          {label:'ACTIVE LOANS',    value:String(active),    bg:[236,253,245], valColor:[11,110,79],  labelColor:[6,95,70]},
-          {label:'OVERDUE',         value:String(overdue),   bg:[254,242,242], valColor:[122,30,30],  labelColor:[153,27,27]},
-          {label:'COMPLETED',       value:String(completed), bg:[240,244,248], valColor:[79,70,229],  labelColor:[79,70,229]},
-          {label:'TOTAL LOANS',     value:String(_loans.length), bg:[240,244,248], valColor:[15,23,42], labelColor:[100,116,139]}
+          { label: 'ACTIVE LOANS', value: String(active), bg: [236, 253, 245], valColor: [11, 110, 79], labelColor: [6, 95, 70] },
+          { label: 'OVERDUE', value: String(overdue), bg: [254, 242, 242], valColor: [122, 30, 30], labelColor: [153, 27, 27] },
+          { label: 'COMPLETED', value: String(completed), bg: [240, 244, 248], valColor: [79, 70, 229], labelColor: [79, 70, 229] },
+          { label: 'TOTAL LOANS', value: String(_loans.length), bg: [240, 244, 248], valColor: [15, 23, 42], labelColor: [100, 116, 139] }
         ]);
 
         // Loans table
         const lcols = [
-          {label:'TITLE',     w:44},
-          {label:'TYPE',      w:22},
-          {label:'PERSON',    w:30},
-          {label:'PRINCIPAL', w:30, right:true},
-          {label:'PAID',      w:28, right:true},
-          {label:'REMAINING', w:28, right:true},
-          {label:'STATUS',    w:CW-182}
+          { label: 'TITLE', w: 44 },
+          { label: 'TYPE', w: 22 },
+          { label: 'PERSON', w: 30 },
+          { label: 'PRINCIPAL', w: 30, right: true },
+          { label: 'PAID', w: 28, right: true },
+          { label: 'REMAINING', w: 28, right: true },
+          { label: 'STATUS', w: CW - 182 }
         ];
 
         // ── Borrowed ──
         if (borrowed.length) {
           y += 4;
           doc.setFillColor(122, 30, 30); doc.rect(M, y, CW, 9, 'F');
-          doc.setTextColor(255,255,255); doc.setFontSize(8); doc.setFont('helvetica','bold');
+          doc.setTextColor(255, 255, 255); doc.setFontSize(8); doc.setFont('helvetica', 'bold');
           doc.text('BORROWED LOANS (' + borrowed.length + ')', M + 4, y + 6); y += 9;
           tableHeader(lcols);
           borrowed.forEach((loan, i) => {
-            const p = parseFloat(loan.amount||0); const pd = parseFloat(loan.amount_paid||0); const rem = Math.max(0,p-pd);
+            const p = parseFloat(loan.amount || 0); const pd = parseFloat(loan.amount_paid || 0); const rem = Math.max(0, p - pd);
             const st = getLoanStatus(loan);
-            const col = st==='overdue'?[122,30,30]:st==='completed'?[11,110,79]:[15,23,42];
-            tableRow(lcols,[loan.title||'—',loan.type,loan.person||'—',fmt(p),fmt(pd),fmt(rem),st.charAt(0).toUpperCase()+st.slice(1)],i,col);
+            const col = st === 'overdue' ? [122, 30, 30] : st === 'completed' ? [11, 110, 79] : [15, 23, 42];
+            tableRow(lcols, [loan.title || '—', loan.type, loan.person || '—', fmt(p), fmt(pd), fmt(rem), st.charAt(0).toUpperCase() + st.slice(1)], i, col);
           });
         }
 
@@ -8231,14 +8805,14 @@
         if (lent.length) {
           y += 8;
           doc.setFillColor(11, 110, 79); doc.rect(M, y, CW, 9, 'F');
-          doc.setTextColor(255,255,255); doc.setFontSize(8); doc.setFont('helvetica','bold');
+          doc.setTextColor(255, 255, 255); doc.setFontSize(8); doc.setFont('helvetica', 'bold');
           doc.text('LENT LOANS (' + lent.length + ')', M + 4, y + 6); y += 9;
           tableHeader(lcols);
           lent.forEach((loan, i) => {
-            const p = parseFloat(loan.amount||0); const pd = parseFloat(loan.amount_paid||0); const rem = Math.max(0,p-pd);
+            const p = parseFloat(loan.amount || 0); const pd = parseFloat(loan.amount_paid || 0); const rem = Math.max(0, p - pd);
             const st = getLoanStatus(loan);
-            const col = st==='overdue'?[122,30,30]:st==='completed'?[11,110,79]:[15,23,42];
-            tableRow(lcols,[loan.title||'—',loan.type,loan.person||'—',fmt(p),fmt(pd),fmt(rem),st.charAt(0).toUpperCase()+st.slice(1)],i,col);
+            const col = st === 'overdue' ? [122, 30, 30] : st === 'completed' ? [11, 110, 79] : [15, 23, 42];
+            tableRow(lcols, [loan.title || '—', loan.type, loan.person || '—', fmt(p), fmt(pd), fmt(rem), st.charAt(0).toUpperCase() + st.slice(1)], i, col);
           });
         }
 
@@ -8246,41 +8820,41 @@
         y += 12;
         doc.addPage(); drawHeader(); y = 44;
         doc.setFillColor(15, 23, 42); doc.rect(M, y, CW, 11, 'F');
-        doc.setTextColor(212, 175, 55); doc.setFontSize(10); doc.setFont('helvetica','bold');
+        doc.setTextColor(212, 175, 55); doc.setFontSize(10); doc.setFont('helvetica', 'bold');
         doc.text('DETAILED PAYMENT HISTORY', M + 4, y + 7.5); y += 15;
 
         for (const loan of _loans) {
           if (y > 250) { doc.addPage(); drawHeader(); y = 44; }
-          const principal2 = parseFloat(loan.amount||0);
-          const paid2      = parseFloat(loan.amount_paid||0);
+          const principal2 = parseFloat(loan.amount || 0);
+          const paid2 = parseFloat(loan.amount_paid || 0);
           const remaining2 = Math.max(0, principal2 - paid2);
-          const status2    = getLoanStatus(loan);
-          const hdrColor   = loan.type==='borrowed' ? [122,30,30] : [11,110,79];
+          const status2 = getLoanStatus(loan);
+          const hdrColor = loan.type === 'borrowed' ? [122, 30, 30] : [11, 110, 79];
           doc.setFillColor(...hdrColor); doc.rect(M, y, CW, 9, 'F');
-          doc.setTextColor(255,255,255); doc.setFontSize(8); doc.setFont('helvetica','bold');
-          doc.text((loan.title||'Unnamed') + ' — ' + (loan.person||'—') + ' — Principal: ' + fmt(principal2) + ' | Paid: ' + fmt(paid2) + ' | Balance: ' + fmt(remaining2), M+3, y+6);
+          doc.setTextColor(255, 255, 255); doc.setFontSize(8); doc.setFont('helvetica', 'bold');
+          doc.text((loan.title || 'Unnamed') + ' — ' + (loan.person || '—') + ' — Principal: ' + fmt(principal2) + ' | Paid: ' + fmt(paid2) + ' | Balance: ' + fmt(remaining2), M + 3, y + 6);
           y += 9;
           const lPayments = await fetchLoanPayments(loan.id);
           if (!lPayments.length) {
-            doc.setFillColor(248,250,252); doc.rect(M,y,CW,7,'F');
-            doc.setTextColor(100,116,139); doc.setFontSize(7.5); doc.setFont('helvetica','italic');
-            doc.text('No payments recorded.', M+4, y+5); y += 9;
+            doc.setFillColor(248, 250, 252); doc.rect(M, y, CW, 7, 'F');
+            doc.setTextColor(100, 116, 139); doc.setFontSize(7.5); doc.setFont('helvetica', 'italic');
+            doc.text('No payments recorded.', M + 4, y + 5); y += 9;
           } else {
-            const hcols = [{label:'DATE',w:42},{label:'NOTES',w:CW-82},{label:'AMOUNT',w:40,right:true}];
-            doc.setFillColor(30,41,59); doc.rect(M,y,CW,7,'F');
-            doc.setTextColor(255,255,255); doc.setFontSize(7); doc.setFont('helvetica','bold');
-            let hx=M+2; hcols.forEach(c=>{doc.text(c.label,c.right?hx+c.w-2:hx,y+5,{align:c.right?'right':'left'});hx+=c.w;}); y+=7;
+            const hcols = [{ label: 'DATE', w: 42 }, { label: 'NOTES', w: CW - 82 }, { label: 'AMOUNT', w: 40, right: true }];
+            doc.setFillColor(30, 41, 59); doc.rect(M, y, CW, 7, 'F');
+            doc.setTextColor(255, 255, 255); doc.setFontSize(7); doc.setFont('helvetica', 'bold');
+            let hx = M + 2; hcols.forEach(c => { doc.text(c.label, c.right ? hx + c.w - 2 : hx, y + 5, { align: c.right ? 'right' : 'left' }); hx += c.w; }); y += 7;
             lPayments.forEach((p2, pi) => {
-              if (y>272){doc.addPage();drawHeader();y=44;}
-              if(pi%2===0){doc.setFillColor(248,250,252);doc.rect(M,y,CW,7,'F');}
-              doc.setDrawColor(226,232,240);doc.line(M,y+7,M+CW,y+7);
-              doc.setFontSize(7.5);doc.setFont('helvetica','normal');
-              let rx=M+2;
-              [[fmtDate(p2.payment_date),false],[p2.notes||'Payment',false],['+'+fmt(p2.amount),true]].forEach(([v,isR],ci)=>{
-                const col2 = ci===2 ? [11,110,79] : [15,23,42];
-                doc.setTextColor(col2[0], col2[1], col2[2]); const tw=hcols[ci].w-4; const sv=String(v); const tt=doc.getTextWidth(sv)>tw?doc.splitTextToSize(sv,tw)[0]+'…':sv;
-                doc.text(tt,isR?rx+hcols[ci].w-2:rx,y+5,{align:isR?'right':'left'}); rx+=hcols[ci].w;
-              }); y+=7;
+              if (y > 272) { doc.addPage(); drawHeader(); y = 44; }
+              if (pi % 2 === 0) { doc.setFillColor(248, 250, 252); doc.rect(M, y, CW, 7, 'F'); }
+              doc.setDrawColor(226, 232, 240); doc.line(M, y + 7, M + CW, y + 7);
+              doc.setFontSize(7.5); doc.setFont('helvetica', 'normal');
+              let rx = M + 2;
+              [[fmtDate(p2.payment_date), false], [p2.notes || 'Payment', false], ['+' + fmt(p2.amount), true]].forEach(([v, isR], ci) => {
+                const col2 = ci === 2 ? [11, 110, 79] : [15, 23, 42];
+                doc.setTextColor(col2[0], col2[1], col2[2]); const tw = hcols[ci].w - 4; const sv = String(v); const tt = doc.getTextWidth(sv) > tw ? doc.splitTextToSize(sv, tw)[0] + '…' : sv;
+                doc.text(tt, isR ? rx + hcols[ci].w - 2 : rx, y + 5, { align: isR ? 'right' : 'left' }); rx += hcols[ci].w;
+              }); y += 7;
             });
           }
           y += 6;
@@ -8290,10 +8864,10 @@
       drawFooters();
       const names = { all: 'full-report', transactions: 'transactions', goals: 'goals', budget: 'monthly-budget', weekly: 'weekly-budget', shopping: 'shopping-list', admin: 'admin-users', savings: 'savings', todo: 'todo-list', 'loans-all': 'loans-portfolio', 'loan-single': 'loan-statement' };
       // Meaningful filename: include loan id for single statements
-      const _dateStr = new Date().toISOString().slice(0,10);
+      const _dateStr = new Date().toISOString().slice(0, 10);
       const _fname = (type === 'loan-single' && extraArg)
         ? `loan_statement_${String(extraArg)}_${_dateStr}.pdf`
-        : `btech-track-${names[type]||type}-${_dateStr}.pdf`;
+        : `btech-track-${names[type] || type}-${_dateStr}.pdf`;
       doc.save(_fname);
     }
 
@@ -8824,7 +9398,7 @@
 
     // Register service worker for offline support
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').catch(() => {});
+      navigator.serviceWorker.register('/sw.js').catch(() => { });
     }
 
 
@@ -8832,195 +9406,195 @@
     // INIT
     // ═══════════════════════════════════════════════════════════
     initAuth();
-  
+
     // ═══════════════════════════════════════════════════════════
     // CALCULATOR ENGINE
     // ═══════════════════════════════════════════════════════════
-    const _calcState = { expr:'', justEvaled:false, history:[], awaitingPow:false };
+    const _calcState = { expr: '', justEvaled: false, history: [], awaitingPow: false };
 
     function calcFn(key) {
-      const main=document.getElementById('calc-main');
-      const expr=document.getElementById('calc-expr');
-      const errEl=document.getElementById('calc-error');
-      errEl.textContent=' ';
-      if(key==='AC'){ _calcState.expr='';_calcState.justEvaled=false;_calcState.awaitingPow=false; main.textContent='0';expr.textContent=' ';return; }
-      if(key==='DEL'){ if(_calcState.justEvaled){_calcState.expr='';_calcState.justEvaled=false;} _calcState.expr=_calcState.expr.slice(0,-1);main.textContent=_calcState.expr||'0';expr.textContent=' ';return; }
-      if(key==='pi'){ if(_calcState.justEvaled)_calcState.expr=''; _calcState.expr+=String(Math.PI);_calcState.justEvaled=false;main.textContent=_calcState.expr;return; }
-      if(key==='='){
-        if(!_calcState.expr)return;
-        try{
-          let raw=_calcState.expr.replace(/[xX]/g,'*').replace(/[÷]/g,'/').replace(/(\d+(\.\d+)?)%/g,'($1/100)');
-          const val=Function('"use strict";return('+raw+')')();
-          if(!isFinite(val))throw new Error();
-          const pretty=parseFloat(val.toFixed(10)).toString();
-          _calcState.history.unshift(_calcState.expr+' = '+pretty);
-          if(_calcState.history.length>20)_calcState.history.pop();
-          expr.textContent=_calcState.expr+' =';
-          main.textContent=pretty;
-          _calcState.expr=pretty;_calcState.justEvaled=true;
+      const main = document.getElementById('calc-main');
+      const expr = document.getElementById('calc-expr');
+      const errEl = document.getElementById('calc-error');
+      errEl.textContent = ' ';
+      if (key === 'AC') { _calcState.expr = ''; _calcState.justEvaled = false; _calcState.awaitingPow = false; main.textContent = '0'; expr.textContent = ' '; return; }
+      if (key === 'DEL') { if (_calcState.justEvaled) { _calcState.expr = ''; _calcState.justEvaled = false; } _calcState.expr = _calcState.expr.slice(0, -1); main.textContent = _calcState.expr || '0'; expr.textContent = ' '; return; }
+      if (key === 'pi') { if (_calcState.justEvaled) _calcState.expr = ''; _calcState.expr += String(Math.PI); _calcState.justEvaled = false; main.textContent = _calcState.expr; return; }
+      if (key === '=') {
+        if (!_calcState.expr) return;
+        try {
+          let raw = _calcState.expr.replace(/[xX]/g, '*').replace(/[÷]/g, '/').replace(/(\d+(\.\d+)?)%/g, '($1/100)');
+          const val = Function('"use strict";return(' + raw + ')')();
+          if (!isFinite(val)) throw new Error();
+          const pretty = parseFloat(val.toFixed(10)).toString();
+          _calcState.history.unshift(_calcState.expr + ' = ' + pretty);
+          if (_calcState.history.length > 20) _calcState.history.pop();
+          expr.textContent = _calcState.expr + ' =';
+          main.textContent = pretty;
+          _calcState.expr = pretty; _calcState.justEvaled = true;
           calcUpdateHistory();
-        }catch(e){errEl.textContent='Syntax error';}
+        } catch (e) { errEl.textContent = 'Syntax error'; }
         return;
       }
-      if(['sqrt','sq','inv','log','ln','pow'].includes(key)){
-        try{
-          let v=Function('"use strict";return('+(_calcState.expr||'0')+')')();
-          if(key==='pow'){_calcState.awaitingPow=v;_calcState.expr='';main.textContent='Exponent…';expr.textContent=v+'^';return;}
-          let res=key==='sqrt'?Math.sqrt(v):key==='sq'?v*v:key==='inv'?1/v:key==='log'?Math.log10(v):Math.log(v);
-          if(!isFinite(res))throw new Error();
-          const pretty=parseFloat(res.toFixed(10)).toString();
-          expr.textContent=key+'('+_calcState.expr+') =';main.textContent=pretty;_calcState.expr=pretty;_calcState.justEvaled=true;
-        }catch(e){errEl.textContent='Domain error';}
+      if (['sqrt', 'sq', 'inv', 'log', 'ln', 'pow'].includes(key)) {
+        try {
+          let v = Function('"use strict";return(' + (_calcState.expr || '0') + ')')();
+          if (key === 'pow') { _calcState.awaitingPow = v; _calcState.expr = ''; main.textContent = 'Exponent…'; expr.textContent = v + '^'; return; }
+          let res = key === 'sqrt' ? Math.sqrt(v) : key === 'sq' ? v * v : key === 'inv' ? 1 / v : key === 'log' ? Math.log10(v) : Math.log(v);
+          if (!isFinite(res)) throw new Error();
+          const pretty = parseFloat(res.toFixed(10)).toString();
+          expr.textContent = key + '(' + _calcState.expr + ') ='; main.textContent = pretty; _calcState.expr = pretty; _calcState.justEvaled = true;
+        } catch (e) { errEl.textContent = 'Domain error'; }
         return;
       }
-      if(_calcState.awaitingPow!==false && ['+','-','*','/','='].includes(key)){
-        try{
-          let res=Math.pow(_calcState.awaitingPow,parseFloat(_calcState.expr||'0'));
-          const pretty=parseFloat(res.toFixed(10)).toString();
-          expr.textContent=_calcState.awaitingPow+'^'+_calcState.expr+' =';
-          main.textContent=pretty;_calcState.expr=pretty;_calcState.awaitingPow=false;_calcState.justEvaled=(key==='=');
-          if(key!=='='){_calcState.expr+=key;_calcState.justEvaled=false;main.textContent=_calcState.expr;}
+      if (_calcState.awaitingPow !== false && ['+', '-', '*', '/', '='].includes(key)) {
+        try {
+          let res = Math.pow(_calcState.awaitingPow, parseFloat(_calcState.expr || '0'));
+          const pretty = parseFloat(res.toFixed(10)).toString();
+          expr.textContent = _calcState.awaitingPow + '^' + _calcState.expr + ' =';
+          main.textContent = pretty; _calcState.expr = pretty; _calcState.awaitingPow = false; _calcState.justEvaled = (key === '=');
+          if (key !== '=') { _calcState.expr += key; _calcState.justEvaled = false; main.textContent = _calcState.expr; }
           return;
-        }catch(e){errEl.textContent='Error';_calcState.awaitingPow=false;return;}
+        } catch (e) { errEl.textContent = 'Error'; _calcState.awaitingPow = false; return; }
       }
-      const ops=['+','-','*','/','.','(',')','%'];
-      if(_calcState.justEvaled&&!ops.includes(key)){_calcState.expr='';_calcState.justEvaled=false;}
-      _calcState.justEvaled=false;_calcState.expr+=key;main.textContent=_calcState.expr;expr.textContent=' ';
+      const ops = ['+', '-', '*', '/', '.', '(', ')', '%'];
+      if (_calcState.justEvaled && !ops.includes(key)) { _calcState.expr = ''; _calcState.justEvaled = false; }
+      _calcState.justEvaled = false; _calcState.expr += key; main.textContent = _calcState.expr; expr.textContent = ' ';
     }
 
-    function calcUpdateHistory(){
-      const el=document.getElementById('calc-history');
-      if(!el)return;
-      el.innerHTML=_calcState.history.map(h=>'<div style="padding:3px 4px;font-size:11px;color:var(--text-muted);font-family:DM Mono,monospace;border-bottom:1px solid var(--border-subtle)">'+h+'</div>').join('');
+    function calcUpdateHistory() {
+      const el = document.getElementById('calc-history');
+      if (!el) return;
+      el.innerHTML = _calcState.history.map(h => '<div style="padding:4px 6px;font-size:11px;color:var(--calc-label-color);font-family:DM Mono,monospace;border-bottom:1px solid var(--calc-card-border);opacity:0.85">' + h + '</div>').join('');
     }
 
-    function calcSwitchTab(tab,btn){
-      ['math','date','currency'].forEach(t=>{
-        const p=document.getElementById('calc-panel-'+t);
-        const b=document.getElementById('calc-tab-'+t);
-        if(p)p.style.display=t===tab?'':'none';
-        if(b)b.classList.toggle('active',t===tab);
+    function calcSwitchTab(tab, btn) {
+      ['math', 'date', 'currency'].forEach(t => {
+        const p = document.getElementById('calc-panel-' + t);
+        const b = document.getElementById('calc-tab-' + t);
+        if (p) p.style.display = t === tab ? '' : 'none';
+        if (b) b.classList.toggle('active', t === tab);
       });
-      if(tab==='currency')calcCurrencyInit();
-      if(tab==='date'){
-        const today=new Date().toISOString().split('T')[0];
-        ['date-from','date-to','date-base'].forEach(id=>{const el=document.getElementById(id);if(el&&!el.value)el.value=today;});
+      if (tab === 'currency') calcCurrencyInit();
+      if (tab === 'date') {
+        const today = new Date().toISOString().split('T')[0];
+        ['date-from', 'date-to', 'date-base'].forEach(id => { const el = document.getElementById(id); if (el && !el.value) el.value = today; });
         calcStartClock();
       }
     }
 
-    let _calcClockTimer=null;
-    function calcStartClock(){
-      if(_calcClockTimer)return;
-      function tick(){
-        const now=new Date(),pad=n=>String(n).padStart(2,'0');
-        const timeEl=document.getElementById('clock-time');if(!timeEl)return;
-        timeEl.textContent=pad(now.getHours())+':'+pad(now.getMinutes())+':'+pad(now.getSeconds());
-        const dateEl=document.getElementById('clock-date');
-        if(dateEl)dateEl.textContent=now.toLocaleDateString('en-KE',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
-        const start=new Date(now.getFullYear(),0,0),oneDay=864e5;
-        const doy=Math.floor((now-start)/oneDay);
-        const doyEl=document.getElementById('clock-doy');if(doyEl)doyEl.textContent=doy;
-        const d=new Date(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate()));
-        d.setUTCDate(d.getUTCDate()+4-(d.getUTCDay()||7));
-        const ys=new Date(Date.UTC(d.getUTCFullYear(),0,1));
-        const wk=Math.ceil((((d-ys)/86400000)+1)/7);
-        const wkEl=document.getElementById('clock-week');if(wkEl)wkEl.textContent='Week '+wk;
-        const yearEnd=new Date(now.getFullYear(),11,31);
-        const left=Math.round((yearEnd-now)/oneDay);
-        const leftEl=document.getElementById('clock-left');if(leftEl)leftEl.textContent=left+' days';
+    let _calcClockTimer = null;
+    function calcStartClock() {
+      if (_calcClockTimer) return;
+      function tick() {
+        const now = new Date(), pad = n => String(n).padStart(2, '0');
+        const timeEl = document.getElementById('clock-time'); if (!timeEl) return;
+        timeEl.textContent = pad(now.getHours()) + ':' + pad(now.getMinutes()) + ':' + pad(now.getSeconds());
+        const dateEl = document.getElementById('clock-date');
+        if (dateEl) dateEl.textContent = now.toLocaleDateString('en-KE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+        const start = new Date(now.getFullYear(), 0, 0), oneDay = 864e5;
+        const doy = Math.floor((now - start) / oneDay);
+        const doyEl = document.getElementById('clock-doy'); if (doyEl) doyEl.textContent = doy;
+        const d = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
+        d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+        const ys = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+        const wk = Math.ceil((((d - ys) / 86400000) + 1) / 7);
+        const wkEl = document.getElementById('clock-week'); if (wkEl) wkEl.textContent = 'Week ' + wk;
+        const yearEnd = new Date(now.getFullYear(), 11, 31);
+        const left = Math.round((yearEnd - now) / oneDay);
+        const leftEl = document.getElementById('clock-left'); if (leftEl) leftEl.textContent = left + ' days';
         calcTZConvert();
       }
-      tick();_calcClockTimer=setInterval(tick,1000);
+      tick(); _calcClockTimer = setInterval(tick, 1000);
     }
 
-    function calcDateDiff(){
-      const from=document.getElementById('date-from').value,to=document.getElementById('date-to').value;
-      const res=document.getElementById('date-diff-result');
-      if(!from||!to){res.style.display='block';res.innerHTML='<span style="color:#EF4444">Please select both dates</span>';return;}
-      const ms=new Date(to)-new Date(from),abs=Math.abs(ms);
-      const days=Math.round(abs/864e5),weeks=Math.floor(days/7),months=Math.round(days/30.4375),years=(abs/(864e5*365.25)).toFixed(2);
-      const sign=ms<0?'(past)':ms>0?'(future)':'(same day)';
-      res.style.display='block';
-      res.innerHTML='<div style="font-weight:700;color:var(--accent-cyan);margin-bottom:8px">'+days+' days '+sign+'</div>'+
-        '<div style="font-size:13px;color:var(--text-muted)">Weeks: <strong style="color:var(--text-primary)">'+weeks+'</strong></div>'+
-        '<div style="font-size:13px;color:var(--text-muted)">Months: <strong style="color:var(--text-primary)">~'+months+'</strong></div>'+
-        '<div style="font-size:13px;color:var(--text-muted)">Years: <strong style="color:var(--text-primary)">~'+years+'</strong></div>';
+    function calcDateDiff() {
+      const from = document.getElementById('date-from').value, to = document.getElementById('date-to').value;
+      const res = document.getElementById('date-diff-result');
+      if (!from || !to) { res.style.display = 'block'; res.innerHTML = '<span style="color:#EF4444">Please select both dates</span>'; return; }
+      const ms = new Date(to) - new Date(from), abs = Math.abs(ms);
+      const days = Math.round(abs / 864e5), weeks = Math.floor(days / 7), months = Math.round(days / 30.4375), years = (abs / (864e5 * 365.25)).toFixed(2);
+      const sign = ms < 0 ? '(past)' : ms > 0 ? '(future)' : '(same day)';
+      res.style.display = 'block';
+      res.innerHTML = '<div style="font-weight:700;color:var(--accent-cyan);margin-bottom:8px">' + days + ' days ' + sign + '</div>' +
+        '<div style="font-size:13px;color:var(--text-muted)">Weeks: <strong style="color:var(--text-primary)">' + weeks + '</strong></div>' +
+        '<div style="font-size:13px;color:var(--text-muted)">Months: <strong style="color:var(--text-primary)">~' + months + '</strong></div>' +
+        '<div style="font-size:13px;color:var(--text-muted)">Years: <strong style="color:var(--text-primary)">~' + years + '</strong></div>';
     }
 
-    function calcDateAdd(){
-      const base=document.getElementById('date-base').value;
-      const days=parseInt(document.getElementById('date-days').value,10);
-      const res=document.getElementById('date-add-result');
-      if(!base||isNaN(days)){res.style.display='block';res.innerHTML='<span style="color:#EF4444">Enter a valid date and number of days</span>';return;}
-      const d=new Date(base);d.setDate(d.getDate()+days);
-      res.style.display='block';
-      res.innerHTML='<div style="font-weight:700;color:#10B981;font-size:15px">'+d.toLocaleDateString('en-KE',{weekday:'long',year:'numeric',month:'long',day:'numeric'})+'</div>'+
-        '<div style="font-size:12px;color:var(--text-muted);margin-top:4px">ISO: '+d.toISOString().split('T')[0]+'</div>';
+    function calcDateAdd() {
+      const base = document.getElementById('date-base').value;
+      const days = parseInt(document.getElementById('date-days').value, 10);
+      const res = document.getElementById('date-add-result');
+      if (!base || isNaN(days)) { res.style.display = 'block'; res.innerHTML = '<span style="color:#EF4444">Enter a valid date and number of days</span>'; return; }
+      const d = new Date(base); d.setDate(d.getDate() + days);
+      res.style.display = 'block';
+      res.innerHTML = '<div style="font-weight:700;color:#10B981;font-size:15px">' + d.toLocaleDateString('en-KE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) + '</div>' +
+        '<div style="font-size:12px;color:var(--text-muted);margin-top:4px">ISO: ' + d.toISOString().split('T')[0] + '</div>';
     }
 
-    function calcTZConvert(){
-      const sel=document.getElementById('tz-select'),res=document.getElementById('tz-result');
-      if(!sel||!res)return;
-      try{const now=new Date();res.textContent=now.toLocaleString('en-US',{timeZone:sel.value,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false,weekday:'short',month:'short',day:'numeric'})+' ('+sel.value+')';}catch(e){res.textContent='—';}
+    function calcTZConvert() {
+      const sel = document.getElementById('tz-select'), res = document.getElementById('tz-result');
+      if (!sel || !res) return;
+      try { const now = new Date(); res.textContent = now.toLocaleString('en-US', { timeZone: sel.value, hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, weekday: 'short', month: 'short', day: 'numeric' }) + ' (' + sel.value + ')'; } catch (e) { res.textContent = '—'; }
     }
 
-    let _calcCurrRates=null;
-    const CALC_CURRENCIES=[
-      ['USD','US Dollar'],['EUR','Euro'],['GBP','British Pound'],['KES','Kenyan Shilling'],
-      ['TZS','Tanzanian Shilling'],['UGX','Ugandan Shilling'],['JPY','Japanese Yen'],
-      ['CNY','Chinese Yuan'],['INR','Indian Rupee'],['AED','UAE Dirham'],['ZAR','South African Rand'],
-      ['NGN','Nigerian Naira'],['EGP','Egyptian Pound'],['GHS','Ghanaian Cedi'],['RWF','Rwandan Franc'],
-      ['CAD','Canadian Dollar'],['AUD','Australian Dollar'],['CHF','Swiss Franc'],['SEK','Swedish Krona'],
-      ['NOK','Norwegian Krone'],['BRL','Brazilian Real'],['MXN','Mexican Peso'],['SAR','Saudi Riyal'],
-      ['SGD','Singapore Dollar'],['HKD','Hong Kong Dollar'],['TRY','Turkish Lira'],['PKR','Pakistani Rupee'],
-      ['BDT','Bangladeshi Taka'],['ETB','Ethiopian Birr'],['XOF','West African CFA']
+    let _calcCurrRates = null;
+    const CALC_CURRENCIES = [
+      ['USD', 'US Dollar'], ['EUR', 'Euro'], ['GBP', 'British Pound'], ['KES', 'Kenyan Shilling'],
+      ['TZS', 'Tanzanian Shilling'], ['UGX', 'Ugandan Shilling'], ['JPY', 'Japanese Yen'],
+      ['CNY', 'Chinese Yuan'], ['INR', 'Indian Rupee'], ['AED', 'UAE Dirham'], ['ZAR', 'South African Rand'],
+      ['NGN', 'Nigerian Naira'], ['EGP', 'Egyptian Pound'], ['GHS', 'Ghanaian Cedi'], ['RWF', 'Rwandan Franc'],
+      ['CAD', 'Canadian Dollar'], ['AUD', 'Australian Dollar'], ['CHF', 'Swiss Franc'], ['SEK', 'Swedish Krona'],
+      ['NOK', 'Norwegian Krone'], ['BRL', 'Brazilian Real'], ['MXN', 'Mexican Peso'], ['SAR', 'Saudi Riyal'],
+      ['SGD', 'Singapore Dollar'], ['HKD', 'Hong Kong Dollar'], ['TRY', 'Turkish Lira'], ['PKR', 'Pakistani Rupee'],
+      ['BDT', 'Bangladeshi Taka'], ['ETB', 'Ethiopian Birr'], ['XOF', 'West African CFA']
     ];
-    const CALC_FALLBACK_RATES={USD:1,EUR:0.92,GBP:0.79,KES:132,TZS:2700,UGX:3750,JPY:157,CNY:7.25,INR:83.5,AED:3.67,ZAR:18.8,NGN:1600,EGP:48,GHS:15.5,RWF:1320,CAD:1.36,AUD:1.55,CHF:0.90,SEK:10.7,NOK:10.6,BRL:5.0,MXN:17.2,SAR:3.75,SGD:1.35,HKD:7.82,TRY:32.5,PKR:278,BDT:110,ETB:57,XOF:600};
+    const CALC_FALLBACK_RATES = { USD: 1, EUR: 0.92, GBP: 0.79, KES: 132, TZS: 2700, UGX: 3750, JPY: 157, CNY: 7.25, INR: 83.5, AED: 3.67, ZAR: 18.8, NGN: 1600, EGP: 48, GHS: 15.5, RWF: 1320, CAD: 1.36, AUD: 1.55, CHF: 0.90, SEK: 10.7, NOK: 10.6, BRL: 5.0, MXN: 17.2, SAR: 3.75, SGD: 1.35, HKD: 7.82, TRY: 32.5, PKR: 278, BDT: 110, ETB: 57, XOF: 600 };
 
-    function calcCurrencyInit(){
-      const from=document.getElementById('curr-from'),to=document.getElementById('curr-to');
-      if(!from||from.options.length>0)return;
-      CALC_CURRENCIES.forEach(([code,label])=>{from.add(new Option(label+' ('+code+')',code));to.add(new Option(label+' ('+code+')',code));});
-      from.value='USD';to.value='KES';
-      if(!_calcCurrRates)calcCurrencyRefresh();else calcCurrency();
+    function calcCurrencyInit() {
+      const from = document.getElementById('curr-from'), to = document.getElementById('curr-to');
+      if (!from || from.options.length > 0) return;
+      CALC_CURRENCIES.forEach(([code, label]) => { from.add(new Option(label + ' (' + code + ')', code)); to.add(new Option(label + ' (' + code + ')', code)); });
+      from.value = 'USD'; to.value = 'KES';
+      if (!_calcCurrRates) calcCurrencyRefresh(); else calcCurrency();
     }
 
-    async function calcCurrencyRefresh(){
-      const info=document.getElementById('curr-rate-info');
-      if(info)info.textContent='Fetching live rates…';
-      try{
-        const r=await fetch('https://api.exchangerate-api.com/v4/latest/USD');
-        if(!r.ok)throw new Error();
-        const data=await r.json();
-        _calcCurrRates=data.rates;_calcCurrRates['USD']=1;
-        if(info)info.textContent='Live rates · Updated: '+new Date(data.date||Date.now()).toLocaleDateString('en-KE');
-      }catch(e){
-        _calcCurrRates={...CALC_FALLBACK_RATES};
-        if(info)info.textContent='Using offline fallback rates';
+    async function calcCurrencyRefresh() {
+      const info = document.getElementById('curr-rate-info');
+      if (info) info.textContent = 'Fetching live rates…';
+      try {
+        const r = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+        if (!r.ok) throw new Error();
+        const data = await r.json();
+        _calcCurrRates = data.rates; _calcCurrRates['USD'] = 1;
+        if (info) info.textContent = 'Live rates · Updated: ' + new Date(data.date || Date.now()).toLocaleDateString('en-KE');
+      } catch (e) {
+        _calcCurrRates = { ...CALC_FALLBACK_RATES };
+        if (info) info.textContent = 'Using offline fallback rates';
       }
       calcCurrency();
     }
 
-    function calcCurrency(){
-      const amount=parseFloat(document.getElementById('curr-amount')?.value)||1;
-      const from=document.getElementById('curr-from')?.value||'USD';
-      const to=document.getElementById('curr-to')?.value||'KES';
-      const rates=_calcCurrRates||CALC_FALLBACK_RATES;
-      const res=document.getElementById('curr-result'),multi=document.getElementById('curr-multi');
-      if(!rates[from]||!rates[to]){if(res)res.textContent='—';return;}
-      const converted=(amount/rates[from])*rates[to];
-      const fmt=n=>n>=1000?n.toLocaleString('en-US',{maximumFractionDigits:2}):n.toFixed(4);
-      if(res)res.textContent=fmt(converted)+' '+to;
-      const snap=['USD','EUR','GBP','KES','AED','ZAR','NGN','JPY'];
-      if(multi)multi.innerHTML=snap.map(code=>{
-        if(code===from)return'';
-        const val=(amount/rates[from])*(rates[code]||0);
-        return'<div style="padding:6px 8px;background:var(--bg-deep);border-radius:6px;font-size:12px"><span style="color:var(--text-muted)">'+code+'</span><span style="float:right;font-weight:700;color:var(--text-primary);font-family:DM Mono,monospace">'+fmt(val)+'</span></div>';
+    function calcCurrency() {
+      const amount = parseFloat(document.getElementById('curr-amount')?.value) || 1;
+      const from = document.getElementById('curr-from')?.value || 'USD';
+      const to = document.getElementById('curr-to')?.value || 'KES';
+      const rates = _calcCurrRates || CALC_FALLBACK_RATES;
+      const res = document.getElementById('curr-result'), multi = document.getElementById('curr-multi');
+      if (!rates[from] || !rates[to]) { if (res) res.textContent = '—'; return; }
+      const converted = (amount / rates[from]) * rates[to];
+      const fmt = n => n >= 1000 ? n.toLocaleString('en-US', { maximumFractionDigits: 2 }) : n.toFixed(4);
+      if (res) res.textContent = fmt(converted) + ' ' + to;
+      const snap = ['USD', 'EUR', 'GBP', 'KES', 'AED', 'ZAR', 'NGN', 'JPY'];
+      if (multi) multi.innerHTML = snap.map(code => {
+        if (code === from) return '';
+        const val = (amount / rates[from]) * (rates[code] || 0);
+        return '<div class="calc-currency-snap-item"><span class="calc-currency-snap-label">' + code + '</span><span class="calc-currency-snap-val">' + fmt(val) + '</span><div style="clear:both"></div></div>';
       }).join('');
     }
 
-    </script>
+  </script>
 </body>
 
 </html>
