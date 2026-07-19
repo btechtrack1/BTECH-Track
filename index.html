@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BTECH Track Maintenance</title><style>
+body{margin:0;font-family:Arial,sans-serif;background:#08131f;color:#fff;display:flex;align-items:center;justify-content:center;min-height:100vh}
+.card{max-width:900px;background:#0f1d2d;border:1px solid #1d3a4d;border-radius:18px;padding:40px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+img{max-width:260px}h1{color:#19b36b} .badge{display:inline-block;background:#154734;padding:8px 14px;border-radius:20px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.count{font-size:2rem;font-weight:bold}.footer{margin-top:30px;border-top:1px solid #2a4154;padding-top:20px;color:#cfd8dc}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style></head><body><div class="card">
+<img src="btech_track_logo(1).png" alt="BTECH Track">
+<p class="badge">Scheduled System Maintenance</p>
+<h1>We're Upgrading BTECH Track</h1>
+<p>Our platform is undergoing scheduled maintenance from <b>21:00 hrs</b> to <b>22:00 hrs</b>. This update strengthens platform security and introduces exciting new capabilities.</p>
+<div class="grid">
+<div><h3>What's New</h3><ul><li>Enhanced security hardening</li><li>Improved Financial Health Score</li><li>Premium wallet experience</li><li>Faster performance</li><li>Bug fixes & stability improvements</li><li>New savings management features</li></ul></div>
+<div><h3>Countdown</h3><div id="c" class="count">Calculating...</div></div></div>
+<div class="footer">
+<b>Contact</b><br>📞 0112887428<br>✉️ btechtrack1@gmail.com<br>Social Media: <b>BTECH STUDIOS</b><br><br>Thank you for your patience. We look forward to welcoming you back with a faster, more secure BTECH Track.
+</div></div>
+<script>
+function upd(){const n=new Date(),t=new Date();t.setHours(22,0,0,0);let d=t-n;if(d<0){c.innerHTML="Maintenance Complete";return;}let h=Math.floor(d/36e5),m=Math.floor(d%36e5/6e4),s=Math.floor(d%6e4/1000);c.textContent=`${h}h ${m}m ${s}s remaining`;}
+setInterval(upd,1000);upd();
+</script></body></html>
